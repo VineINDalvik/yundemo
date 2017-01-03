@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>消费者新需求-数量与性能</title>
+   <meta charset="utf-8">
+   <!-- <base href="file:///Users/hao123/Document/web/"> -->
+   <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="../js/jquery-3.1.1.js"></script>
+   <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+   <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <script src="../yun_demo_js/yun_demo.js"></script>
+
+</head>
+<body>
+	<div class="customer_numxing">
+		<div id="head" class="formal_head">
+          <div class="account">
+            <img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
+            <p class="text2"><span id="user_name">张三</span><br/>消费者</p>
+            <a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/main.html" class="exit">退出</a>
+          </div>
+    </div>
+     <div style="position: absolute;left: 300px;top: 130px;background-image: url(../yun_demo_image/customer_jindu2.png); width: 800px;height: 50px;"></div>
+     <div style="font-size: 15px;position: absolute;left: 320px;top: 190px;">需求产品的名称与类型</div>
+    <div style="font-size: 15px;position: absolute;left: 650px;top: 190px;">数量与性能要求</div>
+    <div style="font-size: 15px;position: absolute;left: 1000px;top: 190px;">收货要求</div>
+    <div style="font-size: 20px;color: black;position: absolute;left: 650px;top: 70px;">发布新需求</div>
+		<div class="main_form">
+			<form class="form-horizontal" id="form_type" role="form" >
+                  <div class="form-group">
+                   <label for="inputAccount" class="col-sm-4 control-label">数量:</label>
+                   <div class="col-sm-8">
+                     <input type="text"  id="type"  required="required" name="sheng" style="width: 90px">&nbsp;件
+                   </div>
+                  </div>
+                  <div class="form-group">
+                   <label for="inputAccount" class="col-sm-4 control-label">重量:</label>
+                   <div class="col-sm-8">
+                     <input type="text"  id="type"  required="required" name="sheng" style="width: 90px">&nbsp;千克
+                   </div>
+                  </div>
+                  <div class="form-group">
+                   <label for="inputAccount" class="col-sm-4 control-label">单件重量:</label>
+                   <div class="col-sm-8">
+                     <input type="text"  id="type"  required="required" name="sheng" style="width: 90px">&nbsp;千克
+                   </div>
+                  </div>
+                  <div class="form-group">
+                   <label for="inputAccount" class="col-sm-4 control-label">单件尺寸:</label>
+                   <div class="col-sm-8">
+                     <input type="text"  id="type"  required="required" name="sheng" style="width: 80px">&nbsp;&times;  
+                     <input type="text"  id="type"  required="required" name="sheng" style="width: 80px">&nbsp;&times;  
+                     <input type="text"  id="type"  required="required" name="sheng" style="width: 80px">&nbsp;米
+                   </div>
+                  </div>
+                  <div class="form-group">
+                   <label for="inputPassword0" class="col-sm-4 control-label">其他性能要求:</label>
+                   <div class="col-sm-8">
+                     <input type="text" class="" id='only_bottom' placeholder=''  required="required" name="jutidizhi">
+                   </div>
+                  </div>
+                  <div class="form-group">
+                   <div class="col-sm-offset-3 col-sm-3">
+                     <button type="button" class="btn btn-primary" onclick="numxing_sure()">确定</button>
+                   </div>
+                   <div class="col-sm-offset-1 col-sm-3">
+                     <button type="button" class="btn btn-primary" onclick="window.location='../%E4%BA%91%E5%88%B6%E9%80%A0demo/customer_nametype.html'">返回</button>
+                   </div>
+                 </div>
+      </form>
+		</div>
+    <div id="zuoxia_fanhui"><a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/customer_funcChoose.html"><p>&#60;&#60;返回功能选择</p></a></div>
+	</div>
+  <script type="text/javascript">
+    initname();
+  </script>
+</body>

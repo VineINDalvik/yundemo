@@ -1,0 +1,63 @@
+#main_p {
+	width: 50%;
+	position: absolute;
+	top:25%;
+	left: 25%;
+}
+#h1 {
+	width: 40%;
+	position: absolute;//absolute的设置会让该段落框不在文本流中，是绝对定位机制，可以设置为不可见来在相同位置显示其他内容
+	top: 0;
+	left: 30%;
+}
+#reg_logon {
+	/*background: Azure;*/
+	width:60%;
+	position: absolute;
+	left: 20%;
+	top: 20%; 
+	/*border-style: solid;
+	border-width: 1px;*/
+}
+#p_register {
+	position: relative;
+	left: 30%;
+}
+#div_register {
+	display: inline-block;
+	width: 45%;
+
+}
+#p_logon {
+	position: relative;
+	left: 30%;
+}
+#div_logon {
+	display: inline-block;
+	position: relative;
+	width: 45%;
+	top: 0;
+	left: 5%
+}
+#register_tip {
+	/*visibility: visible;*/
+	position: absolute;
+	top: 30%;
+	left: 30%;
+
+}
+#exit {
+	position: absolute;
+	top: 6%;
+	right: 2%;
+}
+#kuang {
+	position: absolute;
+	top: 40%;
+	right: 9%;
+	width: 60%;
+	color: #c0c0c0;
+	/*background: #c0c0c0;*/
+}
+
+

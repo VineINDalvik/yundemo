@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>管理员订单列表 </title>
+   <meta charset="utf-8">
+   <!-- <base href="file:///Users/hao123/Document/web/"> -->
+   <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="../js/jquery-3.1.1.js"></script>
+   <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+   <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <script src="../yun_demo_js/yun_demo.js"></script>
+	
+</head>
+
+<body >
+	<div class="shengchanqiye_dingdanweihu">
+		<div id="head" class="formal_head">
+         	<div class="account">
+         		<img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
+         		<p class="text2"><span id="user_name">张三</span><br/>管理员</p>
+         		<a href="main.html" class="exit">退出</a>
+         	</div>
+		</div>
+
+      <div style="width: 150px;font-size: 25px;position: absolute;left: 670px;top: 100px;">订单列表</div>
+      <div class="new" onclick="undesign_order()" id="undesign_order">尚未设计的订单 （<span id="new_num">2</span>）</div>
+      <div class="now" onclick="unfin_order()" id="unfinish_order">尚未生产的订单 （<span id="new_num">6</span>）</div>
+      <div class="nnn" onclick="fini_order()" id="finished_order">已生产的订单 （<span id="now_num">4</span>）</div>
+
+      <table id="cont_1" class="table table-striped" style="width: 900px;position: absolute;left: 300px;top: 170px;z-index: 1;">
+        <thead>
+          <tr>
+            <th>子订单号</th>
+            <th>产品名称</th>
+            <th>详细信息</th>
+            <th>需求方</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>213212300</td>
+            <td>三极管</td>
+            <td>Bangalore</td>
+            <td>560001</td>
+          </tr>
+          <tr>
+            <td>213212301</td>
+            <td>三极管</td>
+            <td>Mumbai</td>
+            <td>400003</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table id="cont_0" class="table table-striped" style="width: 900px;position: absolute;left: 300px;top: 170px;z-index: 1;visibility=hidden;">
+        <thead>
+          <tr>
+            <th>子订单号</th>
+            <th>产品名称</th>
+            <th>详细信息</th>
+            <th>需求方</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>213212310</td>
+            <td>螺丝钉</td>
+            <td>Bangalore</td>
+            <td>560001</td>
+          </tr>
+          <tr>
+            <td>213212311</td>
+            <td>螺丝钉</td>
+            <td>Mumbai</td>
+            <td>400003</td>
+          </tr>
+          <tr>
+            <td>213212312</td>
+            <td>螺丝钉</td>
+            <td>Pune</td>
+            <td>411027</td>
+          </tr>
+          <tr>
+            <td>213212314</td>
+            <td>螺丝钉</td>
+            <td>Bangalore</td>
+            <td>560001</td>
+          </tr>
+          <tr>
+            <td>213212315</td>
+            <td>螺丝钉</td>
+            <td>Mumbai</td>
+            <td>400003</td>
+          </tr>
+          <tr>
+            <td>213212316</td>
+            <td>螺丝钉</td>
+            <td>Pune</td>
+            <td>411027</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table id="cont_2" class="table table-striped" style="width: 900px;position: absolute;left: 300px;top: 170px;z-index: 1;visibility=hidden;">
+        <thead>
+          <tr>
+            <th>子订单号</th>
+            <th>产品名称</th>
+            <th>详细信息</th>
+            <th>需求方</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>213212320</td>
+            <td>电池</td>
+            <td>Bangalore</td>
+            <td>560001</td>
+            <td><button type="button" class="btn btn-primary" onclick="javascript:location.href='xngc_suborderlist.html'">子订单状态跟踪</button></td>
+          </tr>
+          <tr>
+            <td>2132123121</td>
+            <td>电池</td>
+            <td>Mumbai</td>
+            <td>400003</td>
+            <td><button type="button" class="btn btn-primary" onclick="javascript:location.href='xngc_suborderlist.html'">子订单状态跟踪</button></td>
+          </tr>
+          <tr>
+            <td>213212322</td>
+            <td>保护膜</td>
+            <td>Pune</td>
+            <td>411027</td>
+            <td><button type="button" class="btn btn-primary" onclick="javascript:location.href='xngc_suborderlist.html'">子订单状态跟踪</button></td>
+          </tr>
+          <tr>
+            <td>213212323</td>
+            <td>保护膜</td>
+            <td>Bangalore</td>
+            <td>560001</td>
+            <td><button type="button" class="btn btn-primary" onclick="javascript:location.href='xngc_suborderlist.html'">子订单状态跟踪</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div  style="width: 100%;height: 60px;display: inline-block;position: absolute;bottom: 60px;text-align: center;">
+            <button type="button" class="btn btn-primary" onclick="javascript:location.href='gly1.html'" >确认</button>
+         </div>
+
+
+
+   </div>
+</body>

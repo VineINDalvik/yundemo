@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>管理员</title>
+
+	<style type="text/css">
+        .title {
+          margin-bottom: 40px;
+          margin-top: 80px;
+          text-align: center;
+        }
+        .body {
+          background-image: url(../yun_demo_image/bg.png)
+        }
+        .row{
+          text-align: center;
+        }
+	</style>
+
+	<link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="../js/jquery-3.1.1.js"></script>
+  <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+  <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+  <script src="../yun_demo_js/yun_demo.js"></script>
+
+  <script type="text/javascript">
+  function check(){
+    var check = document.getElementByName("1");
+    for(int i=0;i<check.length;i++){
+      if(check[i].checked) check[i].checked="";
+    }
+  }
+    
+  </script>
+
+	</head>
+    <!-- <body class="body">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="../yun_demo_image/banner.png">
+        </div>
+        <div id="navbar" class="navbar-right">
+          <img src="../yun_demo_image/avatar_full.png">
+        </div><!--/.navbar-collapse -->
+      <!-- </div>
+    </nav>
+
+    
+
+    <div class="container">
+        <div class="title">
+          <img src="../yun_demo_image/function.png" class="img-rounded">
+        </div>
+    </div> --> 
+    <body >
+
+    <div class="shengchanqiye_dingdanweihu">
+    <div id="head" class="formal_head">
+          <div class="account">
+            <img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
+            <p class="text2"><span id="user_name">张三</span><br/>管理员</p>
+            <a href="main.html" class="exit">退出</a>
+          </div>
+    </div>
+
+      <div class="title">
+          <img src="../yun_demo_image/title.png" class="img-rounded">
+        </div>
+
+      <div class="row">
+      请根据系统的制造资源算法调配： 
+      <input type="radio" name="1" onclick="check()" checked="checked">成本最优&nbsp&nbsp&nbsp
+      <input type="radio" name="1" ="check()">时间最优<br /><br />
+      <input type="radio" name="1" onclick="check()">质量最优&nbsp&nbsp&nbsp
+      <input type="radio" name="1" onclick="check()">距离最优
+                                <br /><br /><br /><br />
+    
+
+    </div>
+
+    <div  style="width: 100%;height: 60px;display: inline-block;position: absolute;bottom: 60px;text-align: center;">
+            <button type="button" class="btn btn-primary" onclick="javascript:location.href='gly1.html'" >确定</button>
+         </div>
+
+    </body>
+    
+</html>

@@ -1,0 +1,1039 @@
+
+html,body {
+	height: 100%;
+
+}
+#mainbody {
+	width: 100%;
+	height: 100%;
+	background-image:url(../yun_demo_image/shouye.png);
+}
+#head {
+	width: 100%;
+	height: 50px;
+	position: relative;
+	top: 5px;
+
+
+}
+
+#head .title {
+	display: inline-block;
+	height: 100%;
+	/*font-size: 24px;*/
+	position: relative;
+	left: 8%;
+
+}
+#head .title .img {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+}
+#head .title .text {
+	display: inline-block;
+	font-size:24px;
+	margin-top: 10px;
+}
+
+#head .account {
+	display: inline-block;
+	height: 100%;
+	width: 230px;
+	position: absolute;
+	right: 0;
+	/*float: right;*/
+}
+#head .account .img2{
+	display: inline-block;
+	height: 100%;
+	width: 60px;
+	position: absolute;
+	left: 0;
+}
+#head .account .text2{
+	display: inline-block;
+	width: 60px;
+	position: absolute;
+	left: 75px;
+}
+#head .account .exit{
+	display: inline-block;
+	width: 45px;
+	font-size: 20px;
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+}
+
+
+#mainbody #click_1 {
+	width: 10%;
+	height: 10%;
+	position: absolute;
+	top: 60%;
+	left: 15%;
+}
+#mainbody #click_2 {
+	width: 10%;
+	height: 10%;
+	position: absolute;
+	top: 60%;
+	left: 35%;
+}
+#mainbody #click_3 {
+	width: 10%;
+	height: 10%;
+	position: absolute;
+	top: 60%;
+	left: 55%;
+}
+#mainbody #click_4 {
+	width: 10%;
+	height: 10%;
+	position: absolute;
+	top: 60%;
+	left: 75%;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////以上是登录主界面///////*/
+/*//////////////////////////////////////////////////////////////////////////////以下是生产企业界面//////*/
+/*表示是什么身份注册*/
+.shenfenbiaoshi {
+	position: absolute;
+	left: 450px;
+	top: 330px;
+	width: 100px;
+	color: black;
+}
+.chengchanqiye_1 {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/login_background.png);
+	margin-top: -20px;
+
+}
+.chengchanqiye_1 .title {
+	position: relative;
+	top: 150px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100px;
+}
+.chengchanqiye_1 .form {
+	width: 310px;
+	position: absolute;
+	top: 200px;
+	left: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.chengchanqiye_1 .form .long {
+	width: 300px;
+	/*border-style: none none solid none;*/
+	border-bottom-color: #C0C0C0;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+.chengchanqiye_1 .form .c1 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.shengchanqiye_2 {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/logon_background.png);
+	margin-top: -20px;
+
+}
+.shengchanqiye_2 .title {
+	position: relative;
+	top: 150px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100px;
+}
+.shengchanqiye_2 .form {
+	width: 310px;
+	position: absolute;
+	top: 200px;
+	left: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.shengchanqiye_2 .form .long {
+	/*width: 300px;*/
+	border-bottom-color: #C0C0C0;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+.shengchanqiye_2 .form #sevenday {
+	display: inline-block;
+}
+.shengchanqiye_2 .form #p1 {
+	display: inline-block;
+	float: right;
+}
+.shengchanqiye_2 .form .c1 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.shengchanqiye_3 {/*功能选择界面*/
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/shengchanqiye_xuanze.png);
+	
+}
+.shengchanqiye_3  #head {
+
+}
+.shengchanqiye_3  #head .account {
+	display: inline-block;
+	height: 100%;
+	width: 230px;
+	position: absolute;
+	right: 0;
+	color: black;
+	/*float: right;*/
+}
+.shengchanqiye_3  #head .account .img2{
+	display: inline-block;
+	height: 100%;
+	width: 60px;
+	position: absolute;
+	left: 0;
+}
+.shengchanqiye_3  #head .account .text2{
+	display: inline-block;
+	width: 60px;
+	position: absolute;
+	left: 75px;
+}
+.shengchanqiye_3  #head .account .exit{
+	display: inline-block;
+	width: 45px;
+	font-size: 20px;
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+}
+/*定义了一般的head，也就是右上角的用户信息*/
+.formal_head {
+	width: 100%;
+	height: 50px;
+	position: relative;
+	top: 5px;
+
+
+}
+.formal_head .account {
+	display: inline-block;
+	height: 100%;
+	width: 230px;
+	position: absolute;
+	right: 0;
+	color: black;
+	/*float: right;*/
+}
+.formal_head .account .img2{
+	display: inline-block;
+	height: 100%;
+	width: 60px;
+	position: absolute;
+	left: 0;
+}
+.formal_head .account .text2{
+	display: inline-block;
+	width: 60px;
+	position: absolute;
+	left: 75px;
+}
+.formal_head .account .exit{
+	display: inline-block;
+	width: 45px;
+	font-size: 20px;
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+}
+/*定义了两个隐藏的按钮*/
+.shengchanqiye_3 #func_1 {
+	position: absolute;
+	top: 333px;
+	left: 250px;
+	width: 350px;
+	height: 200px;
+	/*z-index: -2;*/
+	/*visibility: hidden;*/
+
+}
+.shengchanqiye_3 #func_2 {
+	position: absolute;
+	top: 333px;
+	left: 845px;
+	width: 350px;
+	height: 200px;
+	/*z-index: -2;*/
+	/*visibility: hidden;*/
+	
+}
+							/*删去的定义*/
+							.shengchanqiye_3 .choose{
+								position: relative;
+								width: 800px;
+								height: 380px;
+								margin-right: auto;
+								margin-left: auto;
+								top: 210px;
+							}
+							.shengchanqiye_3 .choose #choose_1 {
+								position: absolute;
+								width: 320px;
+								height: 380px;
+							}
+							.shengchanqiye_3 .choose #choose_1 #innertext_1 {
+								position: absolute;
+								top: 250px;
+								left: 105px;
+								width: 110px;
+								height: 26px;
+								margin-left: auto;
+								margin-right: auto;
+								border-style: solid;
+								font-size: 15px;
+								border-radius:5px;
+								border-width: 1px;
+							}
+							.shengchanqiye_3 .choose #choose_2 {
+								position: absolute;
+								right: 0;
+								width: 320px;
+								height: 380px;
+								/*border-style: solid;*/
+							}
+							.shengchanqiye_3 .choose #choose_2 #innertext_2 {
+								position: absolute;
+								top: 250px;
+								left: 110px;
+								width: 100px;
+								height: 26px;
+								margin-left: auto;
+								margin-right: auto;
+								border-style: solid;
+								font-size: 15px;
+								border-radius:5px;
+								border-width: 1px;
+							}
+/*生产企业-企业类型*/
+.shengchanqiye_qiyetype {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/scqiye_wanshanxinxi.png);
+}
+.shengchanqiye_qiyetype .main_form {
+	width: 500px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 230px;
+}
+.shengchanqiye_qiyetype .main_form .form-group {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.shengchanqiye_qiyetype .main_form .form-group button {
+	width: 200px;
+}
+/*生产企业-企业地址*/
+.shengchanqiye_location {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/scqiye_wanshanxinxi.png);
+}
+.shengchanqiye_location .main_form {
+	width: 500px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 230px;
+}
+.shengchanqiye_location .main_form .form-group {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.shengchanqiye_location .main_form .form-group select{
+	width: 90px;
+}
+.shengchanqiye_location .main_form .form-group button {
+	width: 100px;
+}
+/*生产企业-企业规模*/
+.shengchanqiye_guimo {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/scqiye_wanshanxinxi.png);
+}
+.shengchanqiye_guimo .main_form {
+	width: 500px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 230px;
+}
+.shengchanqiye_guimo .main_form .form-group {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.shengchanqiye_guimo .main_form .form-group button {
+	width: 100px;
+}
+/*生产企业-企业产品类型*/
+.shengchanqiye_cptype {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/scqiye_wanshanxinxi.png);
+}
+.shengchanqiye_cptype .main_form {
+	width: 500px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 230px;
+}
+.shengchanqiye_cptype .main_form .form-group {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.shengchanqiye_cptype .main_form .form-group button {
+	width: 100px;
+}
+/*生产企业-企业核心生产设备*/
+.shengchanqiye_hexinsc {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/scqiye_wanshanxinxi.png);
+}
+.shengchanqiye_hexinsc .main_form {
+	width: 500px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 160px;
+}
+.shengchanqiye_hexinsc .main_form .form-group {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.shengchanqiye_hexinsc .main_form .form-group button {
+	width: 100px;
+}
+/*生产企业-企业生产流程*/
+.shengchanqiye_liucheng {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/scqiye_wanshanxinxi.png);
+}
+.shengchanqiye_liucheng .main_form {
+	width: 500px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	left: 460px;
+	top: 230px;
+	font-size: 20px;
+	line-height: 30px;
+}
+.shengchanqiye_liucheng .main_form .form-group {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+.shengchanqiye_liucheng .main_form .form-group #only_bottom{
+	border-top-style: none;
+	border-left-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	width: 250px;
+}
+.shengchanqiye_liucheng .main_form .form-group input {
+	height: 30px;
+}
+.shengchanqiye_liucheng .main_form .form-group button {
+	width: 100px;
+}
+/*.shengchanqiye_liucheng #visit {
+	visibility: visible;
+}*/
+.shengchanqiye_liucheng #hide {
+	visibility: hidden;
+}
+
+/*生产企业-订单维护*/
+.shengchanqiye_dingdanweihu {
+	height: 100%;
+	background-image:url(../yun_demo_image/login_back.png);
+}
+	.shengchanqiye_dingdanweihu .new {
+		width: 180px;
+		height: 30px;
+		position: absolute;
+		left: 100px;
+		top: 180px;
+		font-size: 20px;
+		color: #0099ff;
+	}
+	.shengchanqiye_dingdanweihu .now {
+		width: 200px;
+		height: 30px;
+		position: absolute;
+		left: 100px;
+		top: 230px;
+		font-size: 20px;
+	}
+	.shengchanqiye_dingdanweihu .nnn {
+		width: 200px;
+		height: 30px;
+		position: absolute;
+		left: 100px;
+		top: 280px;
+		font-size: 20px;
+	}
+	.shengchanqiye_dingdanweihu .content {
+		width: 900px;
+		height: 450px;
+		position: absolute;
+		left: 300px;
+		top: 170px;
+		background-color: #e0e0e0;
+		z-index: 1;
+	}
+	.shengchanqiye_dingdanweihu .mytable {
+		width: auto;
+		height: auto;
+		position: absolute;
+		left: 300px;
+		top: 170px;
+		z-index: 1;
+	}
+
+	.shengchanqiye_dingdanweihu .thead {
+		display: inline-block;
+		font-size: 20px;
+		width: 150px;
+		height: 60px; 
+		text-align:center;
+		padding-top: 10px;
+		position: absolute;
+		top: 0px;
+		background-color: #e0e0e0;
+		left: 150px
+	}
+
+	.shengchanqiye_dingdanweihu #cont_2 {
+		visibility: hidden;
+	}
+	.shengchanqiye_dingdanweihu #cont_0 {
+		visibility: hidden;
+	}
+
+/*///////////////////////////////////////////////通用////////*/
+#zuoxia_fanhui {
+	font-size: 16px;
+	position: absolute;
+	bottom: 20px;
+	left: 40px;
+}
+
+
+
+/*/////////////////////////////////////////////////////////////////////////////以下是消费者的界面//////*/
+/*注册*/
+.customer_login {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/login_background.png);
+	margin-top: -20px;
+
+}
+.customer_login .title {
+	position: relative;
+	top: 150px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100px;
+}
+.customer_login .form {
+	width: 310px;
+	position: absolute;
+	top: 200px;
+	left: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.customer_login .form .long {
+	width: 300px;
+	border-bottom-color: #C0C0C0;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+/*登录*/
+.customer_logon {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/logon_background.png);
+	margin-top: -20px;
+}
+.customer_logon .title {
+	position: relative;
+	top: 150px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100px;
+}
+.customer_logon .form {
+	width: 310px;
+	position: absolute;
+	top: 200px;
+	left: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.customer_logon .form .long {
+	width: 310px;
+	border-bottom-color: #C0C0C0;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+.customer_logon .form #sevenday {
+	display: inline-block;
+}
+.customer_logon .form #p1 {
+	display: inline-block;
+	float: right;
+}
+.customer_logon .form .c1 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+/*功能选择界面*/
+.customer_funcChoose {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/customer_funcChoose.png);
+}
+	/*定义了两个隐藏的按钮*/
+	.customer_funcChoose #func_1 {
+		position: absolute;
+		top: 333px;
+		left: 140px;
+		width: 350px;
+		height: 200px;
+		/*z-index: -2;*/
+		/*visibility: hidden;*/
+
+
+	}
+	.customer_funcChoose #func_2 {
+		position: absolute;
+		top: 333px;
+		left: 545px;
+		width: 350px;
+		height: 200px;
+		/*z-index: -2;*/
+		/*visibility: hidden;*/
+
+
+	}
+	.customer_funcChoose #func_3 {
+		position: absolute;
+		top: 333px;
+		left: 955px;
+		width: 350px;
+		height: 200px;
+		/*z-index: -2;*/
+		/*visibility: hidden;*/
+
+
+	}
+
+	.xngc_funcChoose {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/xunigongchang_funcChoose.png);
+}
+
+.xngc_funcChoose #head .banner {
+		display: inline-block;
+		height: 35px;
+		width: 293px;
+		position: absolute;
+		left: 35px;
+		top: 4px;
+		/*float: right;*/
+	}
+	
+	/*定义了两个隐藏的按钮*/
+	.xngc_funcChoose #func_1 {
+		position: absolute;
+		top: 333px;
+		left: 140px;
+		width: 350px;
+		height: 200px;
+		/*z-index: -2;*/
+		/*visibility: hidden;*/
+
+
+	}
+	.xngc_funcChoose #func_2 {
+		position: absolute;
+		top: 333px;
+		left: 545px;
+		width: 350px;
+		height: 200px;
+		/*z-index: -2;*/
+		/*visibility: hidden;*/
+
+
+	}
+	.xngc_funcChoose #func_3 {
+		position: absolute;
+		top: 333px;
+		left: 955px;
+		width: 350px;
+		height: 200px;
+		/*z-index: -2;*/
+		/*visibility: hidden;*/
+
+
+	}
+
+	.gly_funcChoose {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/gly_func.png);
+}
+	/*定义了两个隐藏的按钮*/
+	.gly_funcChoose #func_1 {
+		position: absolute;
+		top: 333px;
+		left: 140px;
+		width: 350px;
+		height: 200px;
+		/*z-index: -2;*/
+		/*visibility: hidden;*/
+
+
+	}
+	.gly_funcChoose #func_2 {
+		position: absolute;
+		top: 333px;
+		left: 545px;
+		width: 350px;
+		height: 200px;
+		/*z-index: -2;*/
+		/*visibility: hidden;*/
+
+
+	}
+	.gly_funcChoose #func_3 {
+		position: absolute;
+		top: 333px;
+		left: 955px;
+		width: 350px;
+		height: 200px;
+		/*z-index: -2;*/
+		/*visibility: hidden;*/
+
+
+	}
+
+	
+									/*	//////删去的定义////////*/
+									.customer_funcChoose .choose{
+										position: relative;
+										width: 1100px;
+										height: 380px;
+										margin-right: auto;
+										margin-left: auto;
+										top: 210px;
+										border-style: solid;
+
+									}
+									.customer_funcChoose .choose #choose_1 {
+										position: absolute;
+										width: 320px;
+										height: 380px;
+										border-style: solid;
+									}
+									.customer_funcChoose .choose #choose_1 #innertext_1 {
+										position: absolute;
+										top: 250px;
+										left: 105px;
+										width: 110px;
+										height: 26px;
+										margin-left: auto;
+										margin-right: auto;
+										border-style: solid;
+										font-size: 15px;
+										border-radius:5px;
+										border-width: 1px;
+									}
+									.customer_funcChoose .choose #choose_2 {
+										position: absolute;
+										left: 390px;
+										width: 320px;
+										height: 380px;
+										border-style: solid;
+									}
+									.customer_funcChoose .choose #choose_2 #innertext_2 {
+										position: absolute;
+										top: 250px;
+										left: 110px;
+										width: 100px;
+										height: 26px;
+										border-style: solid;
+										font-size: 15px;
+										border-radius:5px;
+										border-width: 1px;
+									}
+									.customer_funcChoose .choose #choose_3 {
+										position: absolute;
+										top: 0;
+										right: 0;
+										width: 320px;
+										height: 380px;
+										border-style: solid;
+									}
+									.customer_funcChoose .choose #choose_3 #innertext_3 {
+										position: absolute;
+										top: 250px;
+										left: 110px;
+										width: 100px;
+										height: 26px;
+										/*margin-left: auto;
+										margin-right: auto;*/
+										border-style: solid;
+										font-size: 15px;
+										border-radius:5px;
+										border-width: 1px;
+									}
+/*基本信息*/
+.customer_info {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/scqiye_wanshanxinxi.png);
+}
+	.customer_info .main_form {
+		width: 500px;
+		height: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		top: 180px;
+	}
+	.customer_info .main_form .form-group {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.customer_info .main_form .form-group #xiangxi {
+		border-top-style: none;
+		border-left-style: none;
+		border-right-style: none;
+		width: 300px;
+		height: 30px;
+	}
+	.customer_info .main_form .form-group button {
+		width: 200px;
+	}
+/*新需求-名称与种类*/
+.customer_nametype {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/login_back.png);
+}
+	.customer_nametype .main_form {
+		width: 500px;
+		height: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		top: 180px;
+	}
+	.customer_nametype .main_form .form-group {
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+	.customer_nametype .main_form .form-group .radio0{/*radio位置居中*/
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.customer_nametype .main_form .form-group button {
+		width: 100px;
+	}
+/*新需求-数量与性能*/
+.customer_numxing {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/login_back.png);
+}
+	.customer_numxing .main_form {
+		width: 500px;
+		height: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		top: 160px;
+	}
+	.customer_numxing .main_form .form-group {
+		margin-top: 20px;
+		margin-bottom: 15px;
+	}
+	.customer_numxing .main_form .form-group #only_bottom{
+		border-top-style: none;
+		border-left-style: none;
+		border-right-style: none;
+		width: 300px;
+	}
+
+	.customer_numxing .main_form .form-group button {
+		width: 100px;
+	}
+/*新需求-收货确认*/
+.customer_shouhuo {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/login_back.png);
+}
+	.customer_shouhuo .main_form {
+		width: 500px;
+		height: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		top: 170px;
+	}
+	.customer_shouhuo .main_form .form-group {
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+	.customer_shouhuo .main_form .form-group #only_bottom{
+		border-top-style: none;
+		border-left-style: none;
+		border-right-style: none;
+		width: 330px;
+	}
+
+	.customer_shouhuo .main_form .form-group button {
+		width: 100px;
+	}
+/*需求确认*/
+.customer_xuqiusure {
+	color: #888888;
+	height: 100%;
+	background-image:url(../yun_demo_image/scqiye_wanshanxinxi.png);
+}
+	.customer_xuqiusure .main_form {
+		width: 500px;
+		height: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		position: absolute;
+		top: 230px;
+		left: 470px;
+	}
+	.customer_xuqiusure .main_form .form-group {
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+
+
+	.customer_xuqiusure .main_form .form-group button {
+		width: 100px;
+	}
+
+/*消费者-订单维护*/
+.customer_dingdanweihu {
+	height: 100%;
+	background-image:url(../yun_demo_image/login_back.png);
+}
+	.customer_dingdanweihu .weisheji {
+		width: 200px;
+		height: 30px;
+		position: absolute;
+		left: 100px;
+		top: 170px;
+		font-size: 20px;
+		color: #0099ff;
+	}
+	.customer_dingdanweihu .weishengchan {
+		width: 200px;
+		height: 30px;
+		position: absolute;
+		left: 100px;
+		top: 220px;
+		font-size: 20px;
+	}
+	.customer_dingdanweihu .yishengchan {
+		width: 200px;
+		height: 30px;
+		position: absolute;
+		left: 100px;
+		top: 270px;
+		font-size: 20px;
+	}
+	.customer_dingdanweihu .content {
+		width: 900px;
+		height: 450px;
+		position: absolute;
+		left: 300px;
+		top: 170px;
+		background-color: #e0e0e0;
+	}
+	.customer_dingdanweihu #cont_2 {
+		visibility: hidden;
+	}
+	.customer_dingdanweihu #cont_0 {
+		visibility: hidden;
+	}
+
+
+
+
+
+
+
+/*/////////////////////////////////////////////////////////////////////////////以上是消费者的界面//////*/
+
+
+/*/////////////////////////////////////////////////////////////////////////////以下是虚拟工厂的界面//////*/
+#mainbody_xunigongchang {
+	background: #ffffff;
+}
+#mainbody_xunigongchang #head {
+
+}
+#mainbody_xunigongchang #content {
+	width: 500px;
+	height: 400px;
+	background: pink;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 200px;
+}
+#mainbody_xunigongchang #content .headimage .img3 {
+	background: green;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>虚拟工厂 </title>
+   <meta charset="utf-8">
+   <!-- <base href="file:///Users/hao123/Document/web/"> -->
+   <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="../js/jquery-3.1.1.js"></script>
+   <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+   <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <script src="../yun_demo_js/yun_demo.js"></script>
+
+</head>
+<body>
+	<div id="mainbody_xunigongchang">
+		<div id="head">
+			<div class="title">
+            	<img src="..." alt="小图标" class="img-responsive img-rounded img">
+            	<p class="text">智能制造原型演示系统</p>
+         	</div>
+         	<div class="account">
+         		<img src="..." alt="头像" class="img-responsive img-circle img2">
+         		<p class="text2">张三<br/>虚拟工厂</p>
+         		<a href="" class="exit">退出</a>
+         	</div>
+		</div>
+		<div id="content">
+			<div class="headimage">
+				<img src="..." alt="小图标"  width="500px" height="50px"  class="img-responsive img-rounded img3">
+			</div>
+			<div class="con_form">
+				<form class="form-horizontal" id="form_type" role="form" >
+                  <div class="form-group">
+                   <label for="inputAccount" class="col-sm-4 control-label">企业类型:</label>
+                   <div class="col-sm-8">
+                     <div class="col-sm-offset-2 col-sm-4"><input type="radio"  id="inputAccount"  required="required" name="Account">国有企业</div>
+                     <div class="col-sm-offset-2 col-sm-4"><input type="radio"  id="inputAccount"  required="required" name="Account">集体企业</div><br/>
+                     <div class="col-sm-offset-2 col-sm-4"><input type="radio"  id="inputAccount"  required="required" name="Account">私企</div>
+                     <div class="col-sm-offset-2 col-sm-4"><input type="radio"  id="inputAccount"  required="required" name="Account">外企</div>
+                   </div>
+                  </div>
+                  <div class="form-group">
+                   <label for="inputPassword0" class="col-sm-4 control-label">企业名称:</label>
+                   <div class="col-sm-8">
+                     <input type="text" class="form-control" id='inputPassword0' placeholder='企业名称'  required="required" name="qiyename">
+                   </div>
+                  </div>
+                  <div class="form-group">
+                   <label for="inputPassword1" class="col-sm-4 control-label">组织机构代码:</label>
+                   <div class="col-sm-8">
+                     <input type="text" class="form-control" id="inputPassword1" placeholder="机构代码" required="required" name="qiyecode">
+                   </div>
+                  </div>
+                  <div class="form-group">
+                   <div class="col-sm-offset-7 col-sm-2">
+                     <button type="button" class="btn btn-default" onclick="reg_success()">确定</button>
+                   </div>
+                   <div class="col-sm-offset-1 col-sm-2">
+                     <button type="button" class="btn btn-default">返回</button>
+                   </div>
+                 </div>
+      			</form>
+			</div>
+		</div>
+	</div>
+</body>

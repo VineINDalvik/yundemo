@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>管理员注册 </title>
+   <meta charset="utf-8">
+   <!-- <base href="file:///Users/hao123/Document/web/"> -->
+   <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="../js/jquery-3.1.1.js"></script>
+   <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+   <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <script src="../yun_demo_js/yun_demo.js"></script>
+
+</head>
+<body >
+	<div class="customer_login">
+	<div class="shenfenbiaoshi">
+      <h4>管理员</h4>
+    </div>
+  <div style="position: absolute;left: 440px;top: 380px;"><button type="button" class="btn btn-default " onclick="window.location='gly1_logon.html'">直接登录</button></div>
+	<div class="form" >
+			<form class="form-horizontal" id="form0" role="form" >
+                  
+                  <div class="form-group">
+                   
+                     <input type="text" class="form-control long" id='account' placeholder='请输入账号'  required="required" name="account">
+                   
+                  </div>
+                  <div class="form-group">
+                   
+                     <input type="text" class="form-control long" id='password1' placeholder='请输入密码'  required="required" name="password1">
+                   
+                  </div>
+                  <div class="form-group">
+                   
+                     <input type="text" class="form-control long" id='password2' placeholder='请再次输入密码'  required="required" name="password2">
+                   
+                  </div>
+                  <div class="c1 form-group">
+                    <input type="checkbox" class="" id="read" placeholder="请再次确认密码" required="required" name="read">我已阅读并同意智能制造原型演示系统服务条款
+                  </div>
+                  <div class="c1 form-group">
+              <button type="button" class="btn btn-primary btn-lg btn-block" onclick="gly1_login()">注&nbsp;册</button>
+            </div>
+                
+      		</form>
+
+      		    		
+	</div>
+    <div id="zuoxia_fanhui"><a href="main.html"><p>&#60;&#60;返回主界面</p></a></div>
+
+	</div>
+  <script type="text/javascript">
+    // checkCookie();
+  </script>
+</body>

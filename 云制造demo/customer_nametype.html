@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>消费者新需求-名称与种类 </title>
+   <meta charset="utf-8">
+   <!-- <base href="file:///Users/hao123/Document/web/"> -->
+   <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="../js/jquery-3.1.1.js"></script>
+   <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+   <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <script src="../yun_demo_js/yun_demo.js"></script>
+
+</head>
+
+<body>
+	<div class="customer_nametype">
+		<div id="head" class="formal_head">
+          <div class="account">
+            <img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
+            <p class="text2"><span id="user_name">张三</span><br/>消费者</p>
+            <a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/main.html" class="exit">退出</a>
+          </div>
+    </div>
+    <div style="position: absolute;left: 300px;top: 130px;background-image: url(../yun_demo_image/customer_jindu1.png); width: 800px;height: 50px;"></div>
+    <div style="font-size: 15px;position: absolute;left: 320px;top: 190px;">需求产品的名称与类型</div>
+    <div style="font-size: 15px;position: absolute;left: 650px;top: 190px;">数量与性能要求</div>
+    <div style="font-size: 15px;position: absolute;left: 1000px;top: 190px;">收货要求</div>
+    <div style="font-size: 20px;color: black;position: absolute;left: 650px;top: 70px;">发布新需求</div>
+		<div class="main_form">
+			<form class="form-horizontal" id="form_type" role="form" >
+                  <div class="form-group">
+                   <label for="inputAccount" class="col-sm-4 control-label">名称:</label>
+                   <div class="col-sm-8">
+                     <input type="text" class="form-control" id='inputPassword0' placeholder='名称'  required="required" name="qiyename">
+                   </div>
+                  </div>
+                 
+                 <div class="form-group">
+                   <label for="inputAccount" class="col-sm-4 control-label">类型:</label>
+                   <div class="col-sm-8">
+                     <div class="col-sm-offset-1 col-sm-5"><input type="radio"  id="type" class="radio0" required="required" name="type">元器件制造</div>
+                     <div class="col-sm-offset-1 col-sm-5"><input type="radio"  id="type" class="radio0" required="required" name="type">电子装配</div><br/>
+                     <div class="col-sm-offset-1 col-sm-5"><input type="radio"  id="type"  class="radio0" required="required" name="type">互联基板</div>
+                     <div class="col-sm-offset-1 col-sm-5"><input type="radio"  id="type" class="radio0" required="required" name="type">其他</div>
+                   </div>
+                  </div>
+
+                  <div class="form-group">
+                   <label for="inputAccount" class="col-sm-6 control-label">是否有个性化设计方案:</label>
+                   <div class="col-sm-6">
+                     <div class="col-sm-offset-0 col-sm-3"><input type="radio"  id="type" class="radio0" required="required" name="type">是</div>
+                     <div class=" col-sm-3"><input type="radio"  id="type" class="radio0" required="required" name="type">否</div>
+                     <button type="button" class="btn btn-default c col-sm-6" onclick="">上传</button>
+                   </div>
+                  </div>
+                  
+
+                
+
+                  <br/>
+                  <div class="form-group">
+                   <div class="col-sm-offset-3 col-sm-3">
+                     <button type="button" class="btn btn-primary" onclick="nametype_sure()">确定</button>
+                   </div>
+                   <div class="col-sm-offset-3 col-sm-3">
+                     <button type="button" class="btn btn-primary" onclick=" window.location='../%E4%BA%91%E5%88%B6%E9%80%A0demo/customer_funcChoose.html'">返回</button>
+                   </div>
+                 </div>
+      </form>
+		</div>
+     <div id="zuoxia_fanhui"><a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/customer_funcChoose.html"><p>&#60;&#60;返回功能选择</p></a></div>
+	</div>
+  <script type="text/javascript">
+    initname();
+  </script>
+</body>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>生产企业订单维护 </title>
+   <meta charset="utf-8">
+   <!-- <base href="file:///Users/hao123/Document/web/"> -->
+   <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="../js/jquery-3.1.1.js"></script>
+   <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+   <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <script src="../yun_demo_js/yun_demo.js"></script>
+	
+</head>
+
+<body >
+	<div class="shengchanqiye_dingdanweihu">
+		<div id="head" class="formal_head">
+         	<div class="account">
+         		<img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
+         		<p class="text2"><span id="user_name">张三</span><br/>生产企业</p>
+         		<a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/main.html" class="exit">退出</a>
+         	</div>
+		</div>
+		<div style="width: 150px;font-size: 25px;position: absolute;left: 670px;top: 100px;">订单任务维护</div>
+		<div class="new" onclick="newdingdan()" id="new">新订单任务 （<span id="new_num">9</span>）</div>
+		<div class="now" onclick="nowdingdan()" id="now">现有订单任务 （<span id="now_num">1</span>）</div>
+		<div class="content" id="cont_2">
+			<div style="width: 100%;height: 60px;background-color: #c0c0c0; display: inline-block;">
+				<div style="display: inline-block;font-size: 20px;width: 150px;height: 60px; text-align:center;padding-top: 10px;position: absolute;top: 0px;">子订单号</div>
+				<div style="display: inline-block;font-size: 20px;width: 150px;height: 60px; text-align:center;padding-top: 10px;position: absolute;left: 150px;">现处生产阶段</div>
+				<div style="display: inline-block;font-size: 17px;width: 150px;height: 60px; text-align:center;padding-top: 5px;position: absolute;left: 300px;">本生产阶段预<br/>计剩余时间</div>
+				<div style="display: inline-block;font-size: 20px;width: 150px;height: 60px; text-align:center;padding-top: 10px;position: absolute;left: 450px;">有无摄像头</div>
+				<div style="display: inline-block;font-size: 20px;width: 150px;height: 60px; text-align:center;padding-top: 10px;position: absolute;left: 600px;">相关责任人</div>
+				<div style="display: inline-block;font-size: 20px;width: 150px;height: 60px; text-align:center;padding-top: 10px;position: absolute;right: 0px;">手机号</div>
+			</div>
+			
+			<div id="now_main" style="width: 900px;height: 330px;overflow-y:auto">
+				<div style="width: 100%;height: 54px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 144px;height: 54px; text-align:center;padding-top: 10px;">
+						213212312
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 144px;height: 54px;text-align:center; padding-top: 13px;">
+						<select style="width: 130px;">
+							<option selected="selected">请选择</option>
+							<option>未开始</option>
+							<option>第一阶段</option>
+							<option>第二阶段</option>
+							<option>第三阶段</option>
+						</select>
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 144px;height: 54px;padding-left: 20px; padding-top: 13px;">
+						<input type="text" name="" placeholder="" style="border-style: none none solid none;background-color:#e0e0e0;width: 80px;">小时
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 147px;height: 54px;text-align:center; padding-top: 13px;">
+						<select style="width: 110px;">
+							<option selected="selected">请选择</option>
+							<option>有</option>
+							<option>无</option>
+						</select>
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 144px;height: 54px;text-align:center; padding-top: 13px; ">
+						<input type="text" name="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;姓名" style="border-style: none none solid none;background-color:#e0e0e0;width: 100px;">
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 142px;height: 54px;text-align:center; padding-top: 13px; ">
+						<input type="text" name="" placeholder="&nbsp;&nbsp;&nbsp;手机号码" style="border-style: none none solid none;background-color:#e0e0e0;width: 120px;">
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			<div style="width: 100%;height: 60px;display: inline-block;background-color: #989898;position: absolute;top: 390px;">
+				<button type="button" class="btn btn-primary" style="width: 150px;position: relative;left: 700px;top: 20px;" onclick="baocungengxin()">保存更新</button>
+			</div>
+		</div>
+
+		<div class="content" id="cont_1">
+			<div style="width: 100%;height: 60px;background-color: #c0c0c0; display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px;">
+				<div style="display: inline-block;font-size: 20px;width: 180px;height: 60px; text-align:center;padding-top: 10px;position: absolute;top: 0px;">子订单号</div>
+				<div style="display: inline-block;font-size: 20px;width: 180px;height: 60px; text-align:center;padding-top: 10px;position: absolute;left: 180px;">产品名称</div>
+				<div style="display: inline-block;font-size: 20px;width: 180px;height: 60px; text-align:center;padding-top: 10px;position: absolute;left: 360px;">规格</div>
+				<div style="display: inline-block;font-size: 20px;width: 180px;height: 60px; text-align:center;padding-top: 10px;position: absolute;left: 540px;">数量</div>
+				<div style="display: inline-block;font-size: 20px;width: 180px;height: 60px; text-align:center;padding-top: 10px;position: absolute;left: 720px;">截止完成时间</div>
+			</div>
+
+			<div id="new_main" style="width: 900px;height: 330px;overflow-y:auto">
+				<div id="xindingdan_0" style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px;">
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center;padding-top: 10px;">
+						<input type="checkbox" name="xindingdan" id="213212310"> 213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px; ">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;  ">
+						T23
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;">
+						33
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 170px;height: 54px;text-align:center; padding-top: 13px; ">
+						2017/2/2
+					</div>
+				</div>
+				<div id="xindingdan_1" style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px;">
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px; text-align:center;padding-top: 10px;">
+						<input type="checkbox" name="xindingdan" id="213212311"> 213212311
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px; ">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;  ">
+						T23
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;">
+						33
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 170px;height: 54px;text-align:center; padding-top: 13px; ">
+						2017/2/2
+					</div>
+				</div>
+				<div id="xindingdan_2" style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px;">
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center;padding-top: 10px;">
+						<input type="checkbox" name="xindingdan" id="213212312"> 213212312
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px; ">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;  ">
+						T23
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;">
+						33
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 170px;height: 54px;text-align:center; padding-top: 13px; ">
+						2017/2/2
+					</div>
+				</div>
+				<div id="xindingdan_3" style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px;">
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px; text-align:center;padding-top: 10px;">
+						<input type="checkbox" name="xindingdan" id="213212313"> 213212313
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px; ">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;  ">
+						T23
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;">
+						33
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 170px;height: 54px;text-align:center; padding-top: 13px; ">
+						2017/2/2
+					</div>
+				</div>
+				<div id="xindingdan_4" style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px;">
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px; text-align:center;padding-top: 10px;">
+						<input type="checkbox" name="xindingdan" id="213212314"> 213212314
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px; ">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;  ">
+						T23
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;">
+						33
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 170px;height: 54px;text-align:center; padding-top: 13px; ">
+						2017/2/2
+					</div>
+				</div>
+				<div id="xindingdan_5" style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px;">
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px; text-align:center;padding-top: 10px;">
+						<input type="checkbox" name="xindingdan" id="213212315"> 213212315
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px; ">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;  ">
+						T23
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;">
+						33
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 170px;height: 54px;text-align:center; padding-top: 13px; ">
+						2017/2/2
+					</div>
+				</div>
+				<div id="xindingdan_6" style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px;">
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px; text-align:center;padding-top: 10px;">
+						<input type="checkbox" name="xindingdan" id="213212316"> 213212316
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px; ">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;  ">
+						T23
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;">
+						33
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 170px;height: 54px;text-align:center; padding-top: 13px; ">
+						2017/2/2
+					</div>
+				</div>
+				<div id="xindingdan_7" style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px;">
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px; text-align:center;padding-top: 10px;">
+						<input type="checkbox" name="xindingdan" id="213212317"> 213212317
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px; ">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;  ">
+						T23
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;">
+						33
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 170px;height: 54px;text-align:center; padding-top: 13px; ">
+						2017/2/2
+					</div>
+				</div>
+				<div id="xindingdan_8" style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px;">
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px; text-align:center;padding-top: 10px;">
+						<input type="checkbox" name="xindingdan" id="213212318"> 213212318
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px; ">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;  ">
+						T23
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 174px;height: 54px;text-align:center; padding-top: 13px;">
+						33
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 170px;height: 54px;text-align:center; padding-top: 13px; ">
+						2017/2/2
+					</div>
+				</div>
+			</div>
+			
+			<div  style="width: 100%;height: 60px;display: inline-block;background-color: #989898;position: absolute;top: 390px;">
+				<button type="button" class="btn btn-default" style="width: 100px;position: relative;left: 550px;top: 20px;" onclick="jujue()">拒绝</button>
+				<button type="button" class="btn btn-primary" style="width: 100px;position: relative;left: 650px;top: 20px;" onclick="jieshou()">接受</button>
+			</div>
+		</div>
+		
+		
+
+	</div>
+
+	<div id="zuoxia_fanhui"><a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/scqiye_funcChoose.html"><p>&#60;&#60;返回功能选择</p></a></div>
+	<script type="text/javascript">
+		function jujue()
+		{
+			
+			var xindingdan=document.getElementsByName('xindingdan');
+			//alert("jige"+xindingdan.length);
+			var shanchu_id=new Array();
+			for(var i=0; i < xindingdan.length; i++)
+			{
+			
+				
+				if(xindingdan[i].checked)
+				{
+					//alert("checked"+i);
+					var yeye=xindingdan[i].parentNode.parentNode;
+				 	//console.log(yeye);
+				 	//console.log(yeye.id);
+				 	var sss=yeye.id;
+				 	shanchu_id.push(sss);
+				}
+			}
+			//删除选中的，不能一个一个删，会影响
+			for (var i = 0; i < shanchu_id.length; i++) {
+				 	//console.log(shanchu_id[i]);
+				 	var ddd=shanchu_id[i];
+				  	$("#"+ddd).remove();
+			}
+			//document.getElementById("#new_num").innerHTML=document.getElementById("#new_num").innerHTML-shanqu_id.length;
+			var yuan=document.getElementById("new_num").innerHTML;
+			//console.log(yuan);
+			var xian=yuan-shanchu_id.length;
+			//console.log(xian);
+			document.getElementById("new_num").innerHTML=xian;
+		}
+
+		function jieshou()
+		{
+			var xindingdan=document.getElementsByName('xindingdan');
+			var jieshou_id=new Array();
+			var shanchu_id=new Array();
+			for (var i = 0; i < xindingdan.length; i++) {
+				if (xindingdan[i].checked) {
+					var sss=xindingdan[i].id;
+					jieshou_id.push(sss);
+					var yyy=xindingdan[i].parentNode.parentNode;
+					shanchu_id.push(yyy.id);
+				}
+			}
+			 console.log(shanchu_id);
+			 //删除显示
+			 for (var i = 0; i < shanchu_id.length; i++) {
+			 	var ddd=shanchu_id[i];
+				$("#"+ddd).remove();
+			 }
+			 //改变数量显示
+			var yuan=document.getElementById("new_num").innerHTML;
+			var xian=yuan-shanchu_id.length;
+			document.getElementById("new_num").innerHTML=xian;
+			var yuan2=document.getElementById("now_num").innerHTML;
+			var xian2=parseInt(yuan2)+jieshou_id.length;
+			document.getElementById("now_num").innerHTML=xian2;
+
+
+			 //加到现有订单任务中去
+			for (var i = 0; i < jieshou_id.length; i++) {
+
+				 
+				var tianjia_1='<div style="width: 100%;height: 54px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " ><div style="display: inline-block;font-size: 19px;width: 144px;height: 54px; text-align:center;padding-top: 10px;">';
+				var tianjia_2=jieshou_id[i];
+				var tianjia_3='</div> <div style="display: inline-block;font-size: 19px;width: 144px;height: 54px;text-align:center; padding-top: 13px;"><select style="width: 130px;"><option selected="selected">请选择</option><option>未开始</option><option>第一阶段</option><option>第二阶段</option><option>第三阶段</option></select></div> <div style="display: inline-block;font-size: 19px;width: 144px;height: 54px;text-align:center; padding-top: 13px;"><input type="text" name="" placeholder="" style="border-style: none none solid none;background-color:#e0e0e0;width: 80px;">小时</div> <div style="display: inline-block;font-size: 19px;width: 147px;height: 54px;text-align:center; padding-top: 13px;"><select style="width: 110px;"><option selected="selected">请选择</option><option>有</option><option>无</option></select></div> <div style="display: inline-block;font-size: 19px;width: 144px;height: 54px;text-align:center; padding-top: 13px; "><input type="text" name="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;姓名" style="border-style: none none solid none;background-color:#e0e0e0;width: 100px;"></div> <div style="display: inline-block;font-size: 19px;width: 142px;height: 54px;text-align:center; padding-top: 13px; "><input type="text" name="" placeholder="&nbsp;&nbsp;&nbsp;手机号码" style="border-style: none none solid none;background-color:#e0e0e0;width: 120px;"></div></div>';
+				 $('#now_main').append(tianjia_1+tianjia_2+tianjia_3);
+				
+			}
+		}
+
+		function newdingdan()
+		{
+			document.getElementById('cont_1').style.visibility="visible";
+			document.getElementById('cont_2').style.visibility="hidden";
+			document.getElementById('new').style.color="#0099ff";
+			document.getElementById('now').style.color="black";
+		}
+
+		function nowdingdan()
+		{
+			document.getElementById('cont_2').style.visibility="visible";
+			document.getElementById('cont_1').style.visibility="hidden";
+			document.getElementById('now').style.color="#0099ff";
+			document.getElementById('new').style.color="black";
+		}
+		function baocungengxin()
+		{
+			document.getElementById('cont_1').style.visibility="visible";
+			document.getElementById('cont_2').style.visibility="hidden";
+			document.getElementById('new').style.color="#0099ff";
+			document.getElementById('now').style.color="black";
+		}
+
+		 initname();
+	</script>
+	
+				
+
+</body>

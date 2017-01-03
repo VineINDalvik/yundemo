@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>消费者订单维护 </title>
+   <meta charset="utf-8">
+   <!-- <base href="file:///Users/hao123/Document/web/"> -->
+   <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="../js/jquery-3.1.1.js"></script>
+   <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+   <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <script src="../yun_demo_js/yun_demo.js"></script>
+	
+</head>
+
+<body>
+	<div class="customer_dingdanweihu">
+		<div id="head" class="formal_head">
+         	<div class="account">
+         		<img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
+         		<p class="text2"><span id="user_name">张三</span><br/>消费者</p>
+         		<a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/main.html" class="exit">退出</a>
+         	</div>
+		</div>
+		<div style="width: 150px;font-size: 25px;position: absolute;left: 670px;top: 100px;">订单任务维护</div>
+		<div class="weisheji" onclick="weisheji()" id="weisheji">尚未设计的订单 （<span id="weisheji_num">7</span>）</div>
+		<div class="weishengchan" onclick="weishengchan()" id="weishengchan">尚未生产的订单 （<span id="weishengchan_num">7</span>）</div>
+		<div class="yishengchan" onclick="yishengchan()" id="yishengchan">已经生产的订单 （<span id="yishengchan_num">7</span>）</div>
+		<div class="content" id="cont_1">
+			<!-- head -->
+			<div style="width: 100%;height: 60px;background-color: #c0c0c0; display: inline-block;">
+				<div style="display: inline-block;font-size: 20px;width: 180px;height: 60px; text-align:center;padding-top: 15px;position: absolute;top: 0px;">序号</div>
+				<div style="display: inline-block;font-size: 20px;width: 220px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 180px;">子订单号</div>
+				<div style="display: inline-block;font-size: 20px;width: 250px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 400px;">产品名称</div>
+				<div style="display: inline-block;font-size: 20px;width: 250px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 650px;">详细信息</div>
+			</div>
+			<!-- body -->
+			<div id="weisheji_main" style="width: 900px;height: 330px;overflow-y:auto;position: absolute;top: 60px;">
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 175px;height: 55px; text-align:center;padding-top: 13px;">
+						1
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 215px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 245px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 230px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 175px;height: 55px; text-align:center;padding-top: 13px;">
+						2
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 215px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 245px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 230px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 175px;height: 55px; text-align:center;padding-top: 13px;">
+						3
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 215px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 245px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 230px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 175px;height: 55px; text-align:center;padding-top: 13px;">
+						4
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 215px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 245px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 230px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 175px;height: 55px; text-align:center;padding-top: 13px;">
+						5
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 215px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 245px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 230px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 175px;height: 55px; text-align:center;padding-top: 13px;">
+						6
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 215px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 245px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 230px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 175px;height: 55px; text-align:center;padding-top: 13px;">
+						7
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 215px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 245px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 230px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+				</div>
+			</div>
+			<!-- foot -->
+			<div style="width: 100%;height: 60px;display: inline-block;background-color: #989898;position: absolute;top: 390px;left: 0;">
+				<button type="button" class="btn btn-primary" style="width: 150px;position: relative;left: 700px;top: 20px;" onclick="weisheji_sure()">返回功能选择</button>
+			</div>
+		</div>
+
+		<div class="content" id="cont_2">
+			<!-- head -->
+			<div style="width: 100%;height: 60px;background-color: #c0c0c0; display: inline-block;">
+				<div style="display: inline-block;font-size: 20px;width: 140px;height: 60px; text-align:center;padding-top: 15px;position: absolute;top: 0px;">序号</div>
+				<div style="display: inline-block;font-size: 20px;width: 180px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 140px;">子订单号</div>
+				<div style="display: inline-block;font-size: 20px;width: 200px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 320px;">产品名称</div>
+				<div style="display: inline-block;font-size: 20px;width: 200px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 520px;">详细信息</div>
+				<div style="display: inline-block;font-size: 20px;width: 180px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 720px;">生产企业</div>
+			</div>
+			<!-- body -->
+			<div id="weishengchan_main" style="width: 900px;height: 330px;overflow-y:auto;position: absolute;top: 60px;">
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 135px;height: 55px; text-align:center;padding-top: 13px;">
+						1
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 175px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 195px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 195px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 165px;height: 55px;text-align:center; padding-top: 13px;">
+						生产企业
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 135px;height: 55px; text-align:center;padding-top: 13px;">
+						2
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 175px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 195px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 195px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 165px;height: 55px;text-align:center; padding-top: 13px;">
+						生产企业
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 135px;height: 55px; text-align:center;padding-top: 13px;">
+						3
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 175px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 195px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 195px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 165px;height: 55px;text-align:center; padding-top: 13px;">
+						生产企业
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 135px;height: 55px; text-align:center;padding-top: 13px;">
+						4
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 175px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 195px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 195px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 165px;height: 55px;text-align:center; padding-top: 13px;">
+						生产企业
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 135px;height: 55px; text-align:center;padding-top: 13px;">
+						5
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 175px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 195px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 195px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 165px;height: 55px;text-align:center; padding-top: 13px;">
+						生产企业
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 135px;height: 55px; text-align:center;padding-top: 13px;">
+						6
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 175px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 195px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 195px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 165px;height: 55px;text-align:center; padding-top: 13px;">
+						生产企业
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 135px;height: 55px; text-align:center;padding-top: 13px;">
+						7
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 175px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 195px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 195px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 165px;height: 55px;text-align:center; padding-top: 13px;">
+						生产企业
+					</div>
+				</div>
+			</div>
+			<!-- foot -->
+			<div style="width: 100%;height: 60px;display: inline-block;background-color: #989898;position: absolute;top: 390px;left: 0;">
+				<button type="button" class="btn btn-primary" style="width: 150px;position: relative;left: 700px;top: 20px;" onclick="weishengchan_sure()">确定</button>
+			</div>
+
+		</div>
+		<div class="content" id="cont_3">
+			<!-- head -->
+			<div style="width: 100%;height: 60px;background-color: #c0c0c0; display: inline-block;">
+				<div style="display: inline-block;font-size: 20px;width: 80px;height: 60px; text-align:center;padding-top: 15px;position: absolute;top: 0px;">序号</div>
+				<div style="display: inline-block;font-size: 20px;width: 150px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 80px;">子订单号</div>
+				<div style="display: inline-block;font-size: 20px;width: 150px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 230px;">产品名称</div>
+				<div style="display: inline-block;font-size: 20px;width: 160px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 380px;">详细信息</div>
+				<div style="display: inline-block;font-size: 20px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 540px;">生产企业</div>
+				<div style="display: inline-block;font-size: 20px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 660px;">现处生产阶段</div>
+				<div style="display: inline-block;font-size: 20px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 780px;">实况</div>
+			</div>
+			<!-- body -->
+			<div id="yishengchan_main" style="width: 900px;height: 330px;overflow-y:auto;position: absolute;top: 60px;">
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 75px;height: 55px; text-align:center;padding-top: 13px;">
+						1
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 145px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 145px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 155px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 115px;height: 55px;text-align:center; padding-top: 13px;">
+						生产企业
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 115px;height: 55px;text-align:center; padding-top: 13px;">
+						第二阶段
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 110px;height: 55px;text-align:center; padding-top: 13px;">
+						<button type="button" class="btn btn-primary" style="width: 80px;">生产视频</button>
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 75px;height: 55px; text-align:center;padding-top: 13px;">
+						2
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 145px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 145px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 155px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 115px;height: 55px;text-align:center; padding-top: 13px;">
+						生产企业
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 115px;height: 55px;text-align:center; padding-top: 13px;">
+						第二阶段
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 110px;height: 55px;text-align:center; padding-top: 13px;">
+						<button type="button" class="btn btn-primary" style="width: 80px;">生产视频</button>
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 75px;height: 55px; text-align:center;padding-top: 13px;">
+						3
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 145px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 145px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 155px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 115px;height: 55px;text-align:center; padding-top: 13px;">
+						生产企业
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 115px;height: 55px;text-align:center; padding-top: 13px;">
+						第二阶段
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 110px;height: 55px;text-align:center; padding-top: 13px;">
+						<button type="button" class="btn btn-primary" style="width: 80px;">生产视频</button>
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 75px;height: 55px; text-align:center;padding-top: 13px;">
+						4
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 145px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 145px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 155px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 115px;height: 55px;text-align:center; padding-top: 13px;">
+						生产企业
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 115px;height: 55px;text-align:center; padding-top: 13px;">
+						第二阶段
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 110px;height: 55px;text-align:center; padding-top: 13px;">
+						<button type="button" class="btn btn-primary" style="width: 80px;">生产视频</button>
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 75px;height: 55px; text-align:center;padding-top: 13px;">
+						5
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 145px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 145px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 155px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 115px;height: 55px;text-align:center; padding-top: 13px;">
+						生产企业
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 115px;height: 55px;text-align:center; padding-top: 13px;">
+						第二阶段
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 110px;height: 55px;text-align:center; padding-top: 13px;">
+						<button type="button" class="btn btn-primary" style="width: 80px;">生产视频</button>
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 75px;height: 55px; text-align:center;padding-top: 13px;">
+						6
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 145px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 145px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 155px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 115px;height: 55px;text-align:center; padding-top: 13px;">
+						生产企业
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 115px;height: 55px;text-align:center; padding-top: 13px;">
+						第二阶段
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 110px;height: 55px;text-align:center; padding-top: 13px;">
+						<button type="button" class="btn btn-primary" style="width: 80px;">生产视频</button>
+					</div>
+				</div>
+				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
+					<div style="display: inline-block;font-size: 19px;width: 75px;height: 55px; text-align:center;padding-top: 13px;">
+						7
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 145px;height: 55px;text-align:center; padding-top: 13px;">
+						213212310
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 145px;height: 55px;text-align:center; padding-top: 13px;">
+						螺丝钉
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 155px;height: 55px;text-align:center; padding-top: 13px;">
+						该产品详细信息
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 115px;height: 55px;text-align:center; padding-top: 13px;">
+						生产企业
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 115px;height: 55px;text-align:center; padding-top: 13px;">
+						第二阶段
+					</div>
+					<div style="display: inline-block;font-size: 19px;width: 110px;height: 55px;text-align:center; padding-top: 13px;">
+						<button type="button" class="btn btn-primary" style="width: 80px;">生产视频</button>
+					</div>
+				</div>
+			</div>
+			<!-- foot -->
+			<div style="width: 100%;height: 60px;display: inline-block;background-color: #989898;position: absolute;top: 390px;left: 0;">
+				<button type="button" class="btn btn-primary" style="width: 150px;position: relative;left: 700px;top: 20px;" onclick="yishengchan_sure()">确定</button>
+			</div>
+
+
+		</div>
+
+	</div>
+
+	<div id="zuoxia_fanhui"><a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/customer_funcChoose.html"><p>&#60;&#60;返回功能选择</p></a></div>
+
+	<script type="text/javascript">
+		initname();
+		function weisheji()
+		{
+			document.getElementById('cont_1').style.visibility="visible";
+			document.getElementById('cont_2').style.visibility="hidden";
+			document.getElementById('cont_3').style.visibility="hidden";
+			document.getElementById('weisheji').style.color="#0099ff";
+			document.getElementById('weishengchan').style.color="black";
+			document.getElementById('yishengchan').style.color="black";
+		}
+		function weishengchan()
+		{
+			document.getElementById('cont_2').style.visibility="visible";
+			document.getElementById('cont_1').style.visibility="hidden";
+			document.getElementById('cont_3').style.visibility="hidden";
+			document.getElementById('weishengchan').style.color="#0099ff";
+			document.getElementById('weisheji').style.color="black";
+			document.getElementById('yishengchan').style.color="black";
+		}
+		function yishengchan()
+		{
+			document.getElementById('cont_3').style.visibility="visible";
+			document.getElementById('cont_1').style.visibility="hidden";
+			document.getElementById('cont_2').style.visibility="hidden";
+			document.getElementById('yishengchan').style.color="#0099ff";
+			document.getElementById('weisheji').style.color="black";
+			document.getElementById('weishengchan').style.color="black";
+		}
+
+		function weisheji_sure()
+		{
+			window.location.href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/customer_funcChoose.html";
+		}
+		function weishengchan_sure()
+		{
+			weisheji();
+		}
+		function yishengchan_sure()
+		{
+			weisheji();
+		}
+
+	</script>
+</body>
