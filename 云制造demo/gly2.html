@@ -28,41 +28,95 @@
   <script src="../yun_demo_js/yun_demo.js"></script>
 
   <script type="text/javascript">
-  function check(){
-    var check = document.getElementByName("1");
-    for(int i=0;i<check.length;i++){
-      if(check[i].checked) check[i].checked="";
+    function choose(){
+      var check = document.getElementsByName('r1');
+      for(var i=0;i<check.length;i++){
+        if(check[i].checked){
+          if(i==0)
+          {
+            //alert("0");
+            $('#myModal_4').modal('show');
+            $("#jindutiao").animate({width:'100%'},5000,function(){
+              
+              setTimeout("dengwan0()",2000);
+            });
+
+          }
+          if(i==1)
+          {
+             $('#myModal_4').modal('show');
+            $("#jindutiao").animate({width:'100%'},5000,function(){
+              
+              setTimeout("dengwan1()",2000);
+            });
+          }
+          if(i==2)
+          {
+             $('#myModal_4').modal('show');
+            $("#jindutiao").animate({width:'100%'},5000,function(){
+              
+              setTimeout("dengwan2()",2000);
+            });
+          }
+          if(i==3)
+          {
+             $('#myModal_4').modal('show');
+            $("#jindutiao").animate({width:'100%'},5000,function(){
+              
+              setTimeout("dengwan3()",2000);
+            });
+          }
+        }
+      }
     }
-  }
+    function dengwan0()
+    {
+      $('#myModal_4').modal('hide');
+      $('#myModal_0').modal('show');
+      document.getElementById("jindutiao").style.width="0%";
+    }
+    function dengwan1()
+    {
+      $('#myModal_4').modal('hide');
+      $('#myModal_1').modal('show');
+      document.getElementById("jindutiao").style.width="0%";
+    }
+    function dengwan2()
+    {
+      $('#myModal_4').modal('hide');
+      $('#myModal_2').modal('show');
+      document.getElementById("jindutiao").style.width="0%";
+    }
+    function dengwan3()
+    {
+      $('#myModal_4').modal('hide');
+      $('#myModal_3').modal('show');
+      document.getElementById("jindutiao").style.width="0%";
+    }
+    function suanfa()
+    {
+      $('#myModal_5').modal('show');
+    }
+
+    function xuanhao()
+    {
+      $('#myModal_5').modal('hide');
+    }
+
+    // $(document).ready(function(){
+    //   $("#start").click(function(){
+    //     $("#jindutiao").animate({width:'100%'});
+    //   });
     
   </script>
+  <style type="text/css">
+    /*.shengchanqiye_dingdanweihu {
+      background-image: url(../yun_demo_image/login_back.png);
+    }*/
+  </style>
 
 	</head>
-    <!-- <body class="body">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <img src="../yun_demo_image/banner.png">
-        </div>
-        <div id="navbar" class="navbar-right">
-          <img src="../yun_demo_image/avatar_full.png">
-        </div><!--/.navbar-collapse -->
-      <!-- </div>
-    </nav>
-
-    
-
-    <div class="container">
-        <div class="title">
-          <img src="../yun_demo_image/function.png" class="img-rounded">
-        </div>
-    </div> --> 
+   
     <body >
 
     <div class="shengchanqiye_dingdanweihu">
@@ -74,24 +128,233 @@
           </div>
     </div>
 
-      <div class="title">
+      <!-- <div class="title">
           <img src="../yun_demo_image/title.png" class="img-rounded">
-        </div>
-
-      <div class="row">
+        </div> -->
+      <div style="width: 240px;margin-left: auto;margin-right: auto;position: relative;top: 50px;"><h3>制造资源匹配任务处理</h3> </div>
+      <!-- <div class="row" style="font-size: 17px;">
       请根据系统的制造资源算法调配： 
-      <input type="radio" name="1" onclick="check()" checked="checked">成本最优&nbsp&nbsp&nbsp
-      <input type="radio" name="1" ="check()">时间最优<br /><br />
-      <input type="radio" name="1" onclick="check()">质量最优&nbsp&nbsp&nbsp
-      <input type="radio" name="1" onclick="check()">距离最优
+      <input type="radio" name="r1"  checked="checked">成本最优&nbsp&nbsp&nbsp
+      <input type="radio" name="r1" >时间最优<br /><br />
+      <input type="radio" name="r1" >质量最优&nbsp&nbsp&nbsp
+      <input type="radio" name="r1" >距离最优
                                 <br /><br /><br /><br />
-    
+    </div> -->
+
+    <div style="width: 720px;height: 400px; margin-left: auto;margin-right: auto;position: relative;top: 110px;">
+      <div style="color: #0099ff;font-size: 20px;position: relative;left: 40px;top: -20px;">待处理任务</div>
+      <div style="width: 600px;height: 60px;position: relative;">
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 0px;">序号</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 120px;">产品名称</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 240px;">订单号</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 360px;">设计方</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 480px;">部件数目</div>
+      </div>
+      <div style="width: 600px;height: 60px;position: relative;">
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 0px;">1</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 120px;">摄像头</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 240px;">010-9234</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 360px;">金星制造企业</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 480px;">2000</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 10px;position: absolute;left: 600px;">
+                <button type="button" class="btn btn-default" onclick="suanfa()">制造资源优化匹配</button>
+              </div>
+      </div>
+      <div style="width: 600px;height: 60px;position: relative;">
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 0px;">2</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 120px;">摄像头</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 240px;">010-9234</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 360px;">金星制造企业</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 480px;">2000</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 10px;position: absolute;left: 600px;">
+                <button type="button" class="btn btn-default" onclick="suanfa()">制造资源优化匹配</button>
+              </div>
+      </div>
+      <div style="width: 600px;height: 60px;position: relative;">
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 0px;">3</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 120px;">摄像头</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 240px;">010-9234</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 360px;">金星制造企业</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 480px;">2000</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 10px;position: absolute;left: 600px;">
+                <button type="button" class="btn btn-default" onclick="suanfa()">制造资源优化匹配</button>
+              </div>
+      </div>
+      <div style="width: 600px;height: 60px;position: relative;">
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 0px;">4</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 120px;">摄像头</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 240px;">010-9234</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 360px;">金星制造企业</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 480px;">2000</div>
+              <div style="display: inline-block;font-size: 18px;width: 120px;height: 60px; text-align:center;padding-top: 10px;position: absolute;left: 600px;">
+                <button type="button" class="btn btn-default" onclick="suanfa()">制造资源优化匹配</button>
+              </div>
+      </div>
 
     </div>
 
-    <div  style="width: 100%;height: 60px;display: inline-block;position: absolute;bottom: 60px;text-align: center;">
-            <button type="button" class="btn btn-primary" onclick="javascript:location.href='gly1.html'" >确定</button>
-         </div>
+    <div  style="width: 150px;height: 60px;position: relative;margin-left: auto;margin-right: auto;top: 60px;">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='../%E4%BA%91%E5%88%B6%E9%80%A0demo/gly1.html'" style="width: 100%">确定</button>
+    </div>
+
+
+
+  <!-- ///////////////modal////// -->
+
+  <div class="modal fade" id="myModal_5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">算法选择</h4>
+          </div>
+          <div class="modal-body" style="font-size: 15px;">
+           <div>请根据系统的制造资源调配算法：</div>
+           <div>
+             <div style="display: inline-block;"><input type="radio" name="r1">成本最优</div>
+             <div style="display: inline-block;position: relative;left: 20%;"><input type="radio" name="r1">时间最优</div><br/>
+             <div style="display: inline-block;"><input type="radio" name="r1">质量最优</div>
+             <div style="display: inline-block;position: relative;left: 20%;"><input type="radio" name="r1">距离最优</div>
+           </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="choose()">确定</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" id="myModal_4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">正在优化匹配中，请稍后....</h4>
+          </div>
+          <div class="modal-body" style="">
+              <div class="progress">
+                <div id="jindutiao" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                  <span class="sr-only">60% Complete</span>
+                </div>
+              </div>
+
+
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="choose()">确定</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div> -->
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" id="myModal_0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">优化匹配方案选择-根据成本最优算法调度</h4>
+          </div>
+          <div class="modal-body" style="font-size: 15px;">
+            <p></p>
+            <input type="radio" name="a"><span style="color: #0099ff;">方案一:</span>
+            <p>部件一：听筒，上海金星制造公司</p>
+            <p>部件二：摄像头，河北红合制造公司</p>
+            <br/>
+            <input type="radio" name="a"><span style="color: #0099ff;">方案二:</span>
+            <p>部件一：听筒，合肥海山制造公司</p>
+            <p>部件二：摄像头，太原鑫鑫制造公司</p>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="xuanhao()">确定</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" id="myModal_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">优化匹配方案选择-根据时间最优算法调度</h4>
+          </div>
+          <div class="modal-body" style="font-size: 15px;">
+            <p></p>
+            <input type="radio" name="a"><span style="color: #0099ff;">方案一:</span>
+            <p>部件一：听筒，上海金星制造公司</p>
+            <p>部件二：摄像头，河北红合制造公司</p>
+            <br/>
+            <input type="radio" name="a"><span style="color: #0099ff;">方案二:</span>
+            <p>部件一：听筒，合肥海山制造公司</p>
+            <p>部件二：摄像头，太原鑫鑫制造公司</p>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="xuanhao()">确定</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" id="myModal_2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">优化匹配方案选择-根据质量最优算法调度</h4>
+          </div>
+          <div class="modal-body" style="font-size: 15px;">
+            <p></p>
+            <input type="radio" name="a"><span style="color: #0099ff;">方案一:</span>
+            <p>部件一：听筒，上海金星制造公司</p>
+            <p>部件二：摄像头，河北红合制造公司</p>
+            <br/>
+            <input type="radio" name="a"><span style="color: #0099ff;">方案二:</span>
+            <p>部件一：听筒，合肥海山制造公司</p>
+            <p>部件二：摄像头，太原鑫鑫制造公司</p>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="xuanhao()">确定</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div class="modal fade" id="myModal_3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">优化匹配方案选择-根据距离最优算法调度</h4>
+          </div>
+          <div class="modal-body" style="font-size: 15px;">
+            <p></p>
+            <input type="radio" name="a"><span style="color: #0099ff;">方案一:</span>
+            <p>部件一：听筒，上海金星制造公司</p>
+            <p>部件二：摄像头，河北红合制造公司</p>
+            <br/>
+            <input type="radio" name="a"><span style="color: #0099ff;">方案二:</span>
+            <p>部件一：听筒，合肥海山制造公司</p>
+            <p>部件二：摄像头，太原鑫鑫制造公司</p>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="xuanhao()">确定</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    
+    <div id="zuoxia_fanhui"><a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/gly1.html"><p>&#60;&#60;返回功能选择</p></a></div>
 
     </body>
     

@@ -401,7 +401,7 @@ html,body {
 	background-image:url(../yun_demo_image/scqiye_wanshanxinxi.png);
 }
 .shengchanqiye_cptype .main_form {
-	width: 500px;
+	width: 800px;
 	height: 400px;
 	margin-left: auto;
 	margin-right: auto;
@@ -728,8 +728,8 @@ html,body {
 	.gly_funcChoose #func_1 {
 		position: absolute;
 		top: 333px;
-		left: 140px;
-		width: 350px;
+		left: 390px;
+		width: 320px;
 		height: 200px;
 		/*z-index: -2;*/
 		/*visibility: hidden;*/
@@ -739,8 +739,8 @@ html,body {
 	.gly_funcChoose #func_2 {
 		position: absolute;
 		top: 333px;
-		left: 545px;
-		width: 350px;
+		left: 735px;
+		width: 320px;
 		height: 200px;
 		/*z-index: -2;*/
 		/*visibility: hidden;*/
@@ -750,8 +750,8 @@ html,body {
 	.gly_funcChoose #func_3 {
 		position: absolute;
 		top: 333px;
-		left: 955px;
-		width: 350px;
+		left: 1080px;
+		width: 330px;
 		height: 200px;
 		/*z-index: -2;*/
 		/*visibility: hidden;*/

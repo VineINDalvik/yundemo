@@ -41,22 +41,148 @@
             <a href="main.html" class="exit">退出</a>
           </div>
     </div>
+    <div id="zuoxia_fanhui"><a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/gly1.html"><p>&#60;&#60;返回功能选择</p></a></div>
 
-      <div class="row">
+      <!-- <div class="row">
 
-      上传设计方案:  &nbsp&nbsp&nbsp<label><input type="file"></label><br /><br />
+      <button type="button" class="btn btn-primary" onclick="shangchuan()">上传设计方案</button>
+
+      <br /><br />
 
       <button type="button" class="btn btn-primary">添加产品部件</button><br /><br />
       <label>序号:  <input type="text"></label>&nbsp&nbsp&nbsp部件名称:  <input type="text">&nbsp&nbsp&nbsp部件规格:  <input type="text"><br /><br />
       部件数量:  <input type="text">性能要求:  <input type="text"><br /><br /><br /><br />
      
-    </div>
-
-    <div  style="width: 100%;height: 60px;display: inline-block;position: absolute;bottom: 60px;text-align: center;">
-        <button type="button" class="btn btn-primary" onclick="javascript:location.href='xngc_designtasks.html'">确认</button><br /><br />
+    </div> -->
+    <div style="width: 600px;position: relative;margin-left: auto;margin-right: auto;top: 160px;"> 
+      <div style="height: 60px;font-size: 18px;">订单号：&nbsp;&nbsp;&nbsp;&nbsp;<span  id="acc1" style="position: relative;left: 150px;">******</span></div>
+      <div style="height: 60px;font-size: 18px;">上传设计方案：&nbsp;&nbsp;<button style="position: relative;left: 100px; type="button" class="btn btn-primary" onclick="shangchuan()">上传设计方案</button></div>
+      <div style="display: inline-block;height: 60px;font-size: 18px;padding-top: 15px;">添加产品部件：</div>
+      <!-- <div style="width: 500px;height: 60px;background-color: #c0c0c0; display: inline-block;position: relative;left: 150px;top: -60px;">
+          <div style="display: inline-block;font-size: 18px;width: 100px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 0px;">序号</div>
+          <div style="display: inline-block;font-size: 18px;width: 100px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 100px;">部件名称</div>
+          <div style="display: inline-block;font-size: 18px;width: 100px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 200px;">部件规格</div>
+          <div style="display: inline-block;font-size: 18px;width: 100px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 300px;">部件数量</div>
+          <div style="display: inline-block;font-size: 18px;width: 100px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 400px;">性能要求</div>
+        </div> -->
+        <table class="table table-striped" style="display: inline-block;position: relative;width: 500px;left: 150px;top: -50px;z-index: 1;">
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>部件名称</th>
+            <th>部件规格</th>
+            <th>部件数量</th>
+            <th>性能要求</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+        </table>
+        <div style="width: 500px;height: 54px;display: inline-block;border-style: none;  border-color:#c0c0c0;border-width: 1px; position: relative;left: 150px;top: -50px;" >
+          <div style="display: inline-block;font-size: 18px;width: 95px;height: 54px; text-align:center;padding-top: 13px;position: absolute;left: 0px;">
+            <input type="text" name="r" placeholder="1" style="border-style: none none solid none;border-color:#c0c0c0;width: 90px;">
+          </div>
+          <div style="display: inline-block;font-size: 18px;width: 95px;height: 54px;text-align:center; padding-top: 13px;position: absolute;left: 100px;">
+            <input type="text" name="r" placeholder="&nbsp;&nbsp;&nbsp;手机壳" style="border-style: none none solid none;border-color:#c0c0c0;width: 90px;">
+          </div>
+          <div style="display: inline-block;font-size: 18px;width: 95px;height: 54px;text-align: center; padding-top: 13px;position: absolute;left: 200px;">
+            <input type="text" name="r" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4" style="border-style: none none solid none;border-color:#c0c0c0;width: 90px;">
+          </div>
+          <div style="display: inline-block;font-size: 18px;width: 95px;height: 54px;text-align:center; padding-top: 13px;position: absolute;left: 300px;">
+            <input type="text" name="r" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32" style="border-style: none none solid none;border-color:#c0c0c0;width: 90px;">
+          </div>
+          <div style="display: inline-block;font-size: 18px;width: 95px;height: 54px;text-align:center; padding-top: 13px;position: absolute;left: 400px;">
+            <input type="text" name="r" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;要求" style="border-style: none none solid none;border-color:#c0c0c0;width: 90px;">
+          </div>
+          
+        </div>
+        <div style="position: relative;left: 80px;top: -95px;font-size: 18px;color: #c0c0c0; width: 50px;">示例</div>
+        <div style="position: relative;left: 150px;top: -60px;"><button type="button" class="btn btn-primary" onclick="tianjia()">添加该部件</button></div>
+        
+       <div  style="width: 200%;height: 60px;display: inline-block;position: relative; left:460px;">
+        <button type="button" class="btn btn-primary" style="width: 200px;" onclick="javascript:location.href='xngc_designtasks.html'">确认该方案</button><br /><br />
       </div>
+
+    </div>
+    
+
+    
     
   </div>
+
+  <div class="modal fade" id="myModal_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">请提供设计方案图</h4>
+          </div>
+          <div class="modal-body" style="font-size: 17px;">
+            <p>提供设计方案图请按照如下手机示例图的样式:</p>
+            <img src="../yun_demo_image/phone.png"><br/><br/>
+            上传设计方案:  &nbsp&nbsp&nbsp<label><input type="file"></label>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <script type="text/javascript">
+      var Request = new Object();
+      Request = GetRequest();
+      var acc;
+      acc = Request["account"];
+      //alert(acc);
+      var a=document.getElementById("acc1");
+      a.innerHTML=acc;
+      function shangchuan()
+      { 
+        $('#myModal_1').modal('show');
+
+      }
+      function tianjia()
+      {
+        var in1 = document.getElementsByName("r");
+        var tbody = document.getElementById("tbody");
+        // tbody.innerHTML +="<tr><td>1"+in1[0].value+"</td><td>"+in1[1].value+"</td><td>11"+in1[2].value+"</td>"+
+        // "<td>"+in1[3].value+"</td><td>1"+in1[4].value+"</td></tr>";
+
+        var tr = document.createElement("tr"); //新建一个tr类型的Element节点
+        var td1 = document.createElement("td"); //新建一个td类型的Element节点
+        td1.innerHTML = in1[0].value;
+        tr.appendChild(td1);
+        var td2 = document.createElement("td"); //新建一个td类型的Element节点
+        td2.innerHTML = in1[1].value;
+        tr.appendChild(td2);
+        var td3 = document.createElement("td"); //新建一个td类型的Element节点
+        td3.innerHTML = in1[2].value;
+        tr.appendChild(td3);
+        var td4 = document.createElement("td"); //新建一个td类型的Element节点
+        td4.innerHTML = in1[3].value;
+        tr.appendChild(td4);
+        var td5 = document.createElement("td"); //新建一个td类型的Element节点
+        td5.innerHTML = in1[4].value;
+        tr.appendChild(td5);
+        tbody.appendChild(tr);
+
+      }
+
+      function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+         var theRequest = new Object();
+         if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for(var i = 0; i < strs.length; i ++) {
+               theRequest[strs[i].split("=")[0]]=(strs[i].split("=")[1]);
+            }
+         }
+         return theRequest;
+      }
+    </script>
 
   </body>
 </html>

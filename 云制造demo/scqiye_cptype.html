@@ -11,6 +11,16 @@
    <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
    <script src="../yun_demo_js/yun_demo.js"></script>
 
+  <!--  <style type="text/css">
+     .main_form {
+      width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      top: 300px;
+      border-style: solid;
+     }
+   </style> -->
 </head>
 
 <body>
@@ -23,16 +33,11 @@
          	</div>
 		</div>
 		<div class="main_form">
-			<form class="form-horizontal" id="form_type" role="form" >
+			<form class="form-horizontal" id="form_type" role="form" style="width: 100%;">
 
-                  <div class="form-group">
-                   <label for="inputPassword0" class="col-sm-4 control-label">产品名称:</label>
-                   <div class="col-sm-8">
-                     <input type="text" class="form-control" id='inputPassword0' placeholder='企业名称'  required="required" name="qiyename">
-                   </div>
-                  </div>
+                  
 
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                    <label for="inputAccount" class="col-sm-4 control-label">产品种类:</label>
                    <div class="col-sm-8">
                      <div class="col-sm-offset-1 col-sm-5"><input type="radio"  id="type"  required="required" name="type">元器件制造</div>
@@ -40,17 +45,18 @@
                      <div class="col-sm-offset-1 col-sm-5"><input type="radio"  id="type"  required="required" name="type">互联基板</div>
                      <div class="col-sm-offset-1 col-sm-5"><input type="radio"  id="type"  required="required" name="type">外企</div>
                    </div>
-                  </div>
+                  </div> -->
+                  <div style="color: black;font-size: 18px;position: relative;top: -50px;width: 100px;">产品种类:</div>
+                  <div style="display: inline-block;"><img src="../yun_demo_image/shouji.png"><br/><br/><input type="radio"  id="type"  required="required" name="type">元器件制造</div>
+                  <div style="display: inline-block;position: relative;left: 70px;"><img src="../yun_demo_image/dianzi.png"><br/><br/><input type="radio"  id="type"  required="required" name="type">电子装配</div>
+                  <div style="display: inline-block;position: relative;left: 140px;"><img src="../yun_demo_image/hulian.png"><br/><br/><input type="radio"  id="type"  required="required" name="type">互联基板</div>
                   
-                  <div class="form-group">
-                   <label for="inputPassword1" class="col-sm-4 control-label">生产能力:</label>
-                   <div class="col-sm-8">
-                     <!-- <input type="text" class="form-control" id="inputPassword1" placeholder="" required="required" name="qiyecode" style="width: 200px">件/天 -->
-                     <div class=" col-sm-6"><input type="text" class="form-control" id="inputPassword1" placeholder="" required="required" name="qiyecode" ></div>
-                     <div class=" col-sm-4">件/天</div>
-                   </div>
-                  </div>
-                  <br/>
+                  <div style="display: inline-block;position: relative;left: 210px;"><img src="../yun_demo_image/yuanqijian.png"><br/><br/><input type="radio"  id="type"  required="required" name="type">电子元器件</div>
+                  
+                  <div style="display: inline-block;position: relative;left: 280px;"><img src=""><br/><br/><input type="radio"  id="type"  required="required" name="type">其他</div>
+
+                  
+                  <br/><br/><br/><br/>
                   <div class="form-group">
                    <div class="col-sm-offset-3 col-sm-3">
                      <button type="button" class="btn btn-default" onclick="window.location='../%E4%BA%91%E5%88%B6%E9%80%A0demo/scqiye_guimo.html'">上一页</button>

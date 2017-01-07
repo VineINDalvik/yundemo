@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>管理员功能选择</title>
+   <meta charset="utf-8">
+   <!-- <base href="file:///Users/hao123/Document/web/"> -->
+   <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="../js/jquery-3.1.1.js"></script>
+   <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+   <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <script src="../yun_demo_js/yun_demo.js"></script>
+
+   <style type="text/css">
+     .gly_qiyeshow {
+      
+       height: 100%;
+        background-image: url(../yun_demo_image/login_back.png)
+     }
+     
+     
+   </style>
+
+</head>
+
+<body >
+  <div class="gly_qiyeshow">
+    <div id="head" class="formal_head">
+          <div class="account">
+            <img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
+            <p class="text2"><span id="user_name">张三</span><br/>管理员</p>
+            <a href="main.html" class="exit">退出</a>
+          </div>
+    </div>
+    <div id="zuoxia_fanhui"><a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/gly1.html"><p>&#60;&#60;返回功能选择</p></a></div>
+    <div style="width: 150px;position: absolute;top: 650px;right: 100px;"><a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/gly1.html"><button type="button" class="btn btn-primary" style="width: 80%;">确定</button></a></div>
+    <div style="text-align: center;position: relative;top: 30px;"><h2>制造资料库展示</h2></div>
+    <br/><br/>
+    <div style="width: 900px;height: 500px; margin-left: auto;margin-right: auto;">
+      <div>
+        <div style="color: #0099ff;font-size: 20px;">元器件生产企业（34）</div>
+        <div style="width: 100%;position: relative;margin: 20px;font-size: 18px;">
+          <div style="display: inline-block;" onclick="xiangxi('金星制造企业')"><img src="">金星制造企业</div>
+          <div style="display: inline-block;position: relative;left: 60px;"><img src="">制造企业</div>
+          <div style="display: inline-block;position: relative;left: 120px;"><img src="">制造企业</div>
+          <div style="display: inline-block;position: relative;left: 180px;"><img src="">制造企业</div><br/><br/>
+          <div style="display: inline-block;"><img src="">制造企业</div>
+          <div style="display: inline-block;position: relative;left: 60px;"><img src="">制造企业</div>
+          <div style="display: inline-block;position: relative;left: 120px;"><img src="">制造企业</div>
+          <div style="display: inline-block;position: relative;left: 180px;"><img src="">制造企业</div>
+        </div><br/>
+
+        <div style="color: #0099ff;font-size: 20px;">热加工生产企业（13）</div>
+        <div style="width: 100%;position: relative;margin: 20px;font-size: 18px;">
+          <div style="display: inline-block;"><img src="">制造企业</div>
+          <div style="display: inline-block;position: relative;left: 60px;"><img src="">制造企业</div>
+          <div style="display: inline-block;position: relative;left: 120px;"><img src="">制造企业</div>
+          <div style="display: inline-block;position: relative;left: 180px;"><img src="">制造企业</div>
+          
+        </div><br/>
+
+        <div style="color: #0099ff;font-size: 20px;">互联基板生产企业（62）</div>
+        <div style="width: 100%;position: relative;margin: 20px;font-size: 18px;">
+          <div style="display: inline-block;"><img src="">制造企业</div>
+          <div style="display: inline-block;position: relative;left: 60px;"><img src="">制造企业</div>
+          <div style="display: inline-block;position: relative;left: 120px;"><img src="">制造企业</div>
+          <div style="display: inline-block;position: relative;left: 180px;"><img src="">制造企业</div><br/><br/>
+          <div style="display: inline-block;"><img src="">制造企业</div>
+          <div style="display: inline-block;position: relative;left: 60px;"><img src="">制造企业</div>
+          <div style="display: inline-block;position: relative;left: 120px;"><img src="">制造企业</div>
+          <div style="display: inline-block;position: relative;left: 180px;"><img src="">制造企业</div><br/><br/>
+          <div style="display: inline-block;"><img src="">制造企业</div>
+          <div style="display: inline-block;position: relative;left: 60px;"><img src="">制造企业</div>
+          <div style="display: inline-block;position: relative;left: 120px;"><img src="">制造企业</div>
+          <div style="display: inline-block;position: relative;left: 180px;"><img src="">制造企业</div>
+
+        </div><br/>
+        
+      </div>     
+    </div>
+
+
+
+    <div class="modal fade" id="myModal_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" style="position: relative;left: 30px;color: #0099ff;">企业详细信息</h4>
+          </div>
+          <div class="modal-body" style="font-size: 17px;color: #888888;">
+            <div style="width: 600px;height: 60px;position: relative;">
+              <div style="display: inline-block;width: 110px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 0px;">企业名称</div>
+              <div style="display: inline-block; width: 110px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 110px;">地点</div>
+              <div style="display: inline-block; width: 110px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 220px;">产品名称</div>
+              <div style="display: inline-block;width: 110px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 330px;">产品规格</div>
+              <div style="display: inline-block; width: 110px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 440px;">生产能力</div>
+            </div>
+           <div style="width: 600px;height: 60px;position: relative;">
+              <div style="display: inline-block; width: 110px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 0px;"><span id="xinxi_name">某制造企业</span></div>
+              <div style="display: inline-block; width: 110px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 110px;">北京</div>
+              <div style="display: inline-block;width: 110px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 220px;">摄像头</div>
+              <div style="display: inline-block;width: 110px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 330px;">TS3800</div>
+              <div style="display: inline-block;width: 110px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 440px;">500件/天</div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+  </div>
+
+
+
+
+
+  <script type="text/javascript">
+      initname();
+
+      function xiangxi(a)
+      {
+        document.getElementById("xinxi_name").innerHTML=a;
+        $('#myModal_1').modal('show');
+      }
+      // document.getElementById("user_name").innerHTML="sdsdsdsd";
+  </script>
+</body>

@@ -10,7 +10,12 @@
 
    <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
    <script src="../yun_demo_js/yun_demo.js"></script>
-
+   <style type="text/css">
+     .form-group {
+      margin-top: 10px;
+      margin-bottom: 10px;
+     }
+   </style>
 </head>
 
 <body>
@@ -46,6 +51,20 @@
                      <div class="col-sm-offset-1 col-sm-5"><input type="radio"  id="type"  required="required" name="type">&nbsp;1000人以上</div>
                    </div>
                   </div>
+                  <div class="form-group">
+                   <label for="inputPassword0" class="col-sm-4 control-label">产品名称:</label>
+                   <div class="col-sm-8">
+                     <input type="text" class="form-control" id='inputPassword0' placeholder='产品名称'  required="required" name="qiyename">
+                   </div>
+                  </div>
+                  <div class="form-group">
+                   <label for="inputPassword1" class="col-sm-4 control-label">生产能力:</label>
+                   <div class="col-sm-8">
+                     <!-- <input type="text" class="form-control" id="inputPassword1" placeholder="" required="required" name="qiyecode" style="width: 200px">件/天 -->
+                     <div class=" col-sm-6"><input type="text" class="form-control" id="inputPassword1" placeholder="" required="required" name="qiyecode" ></div>
+                     <div class=" col-sm-4">件/天</div>
+                   </div>
+                  </div>
                   <br/>
                   <div class="form-group">
                    <div class="col-sm-offset-3 col-sm-3">
@@ -55,6 +74,7 @@
                      <button type="button" class="btn btn-primary" onclick="window.location='../%E4%BA%91%E5%88%B6%E9%80%A0demo/scqiye_cptype.html'">下一页</button>
                    </div>
                  </div>
+                  
       </form>
 		</div>
     <div id="zuoxia_fanhui"><a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/scqiye_funcChoose.html"><p>&#60;&#60;返回功能选择</p></a></div>
