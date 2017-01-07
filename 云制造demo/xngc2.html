@@ -11,6 +11,7 @@
    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
    <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <link href="../yun_demo_css/animations.css" rel="stylesheet">
    <script src="../yun_demo_js/yun_demo.js"></script>
 
 	<style type="text/css">
@@ -29,12 +30,16 @@
 	</style>
 
   <script type="text/javascript">
-  function check(){
-    var check = document.getElementByName("1");
-    for(int i=0;i<check.length;i++){
-      if(check[i].checked) check[i].checked="";
+  
+  function back(a){
+      $('#xngc2').removeClass('pt-page-flipInLeft');
+      $('#xngc2').addClass('pt-page-flipOutLeft');
+      setTimeout(
+         function(){
+            window.location = a;
+         },200
+      )
     }
-  }
   </script>
 	</head>
     <body >
@@ -63,12 +68,12 @@
         </div>
     </div> -->
  
-   <div class="shengchanqiye_dingdanweihu">
+   <div id="xngc2" class="shengchanqiye_dingdanweihu pt-page-flipInLeft">
     <div id="head" class="formal_head">
           <div class="account">
             <img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
             <p class="text2"><span id="user_name">甲厂</span><br/>虚拟工厂</p>
-            <a href="main.html" class="exit">退出</a>
+            <a href="javascript:;" onclick="back('main.html')" class="exit">退出</a>
           </div>
     </div>
 
@@ -88,13 +93,13 @@
 
       设计时长： <input type="text" name="text">小时以内<br /><br /><br /><br />
 
-      <button type="button" class="btn btn-primary" onclick="javascript:location.href='xngc1.html'">确认</button><br /><br />
+      <button type="button" class="btn btn-primary" onclick="back('xngc1.html')">确认</button><br /><br />
      
     </div>
     
   </div>
 
-  <div id="zuoxia_fanhui"><a href="xngc1.html"><p>&#60;&#60;返回功能选择</p></a></div>
+  <div id="zuoxia_fanhui"><a href="javascript:;" onclick="back('xngc1.html')"><p>&#60;&#60;返回功能选择</p></a></div>
 
   </body>
 </html>

@@ -9,17 +9,18 @@
    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
    <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <link href="../yun_demo_css/animations.css" rel="stylesheet">
    <script src="../yun_demo_js/yun_demo.js"></script>
 	
 </head>
 
 <body >
-	<div class="shengchanqiye_dingdanweihu">
+	<div id="scqy3" class="shengchanqiye_dingdanweihu pt-page-rotateCarouselBottomIn">
 		<div id="head" class="formal_head">
          	<div class="account">
          		<img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
          		<p class="text2"><span id="user_name">张三</span><br/>生产企业</p>
-         		<a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/main.html" class="exit">退出</a>
+         		<a href="javascript:;" onclick="back('main.html')" class="exit">退出</a>
          	</div>
 		</div>
 		<div style="width: 150px;font-size: 25px;position: absolute;left: 670px;top: 100px;">订单任务维护</div>
@@ -250,8 +251,19 @@
 
 	</div>
 
-	<div id="zuoxia_fanhui"><a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/scqiye_funcChoose.html"><p>&#60;&#60;返回功能选择</p></a></div>
+	<div id="zuoxia_fanhui"><a href="javascript:;" onclick="back('scqiye_funcChoose.html')"><p>&#60;&#60;返回功能选择</p></a></div>
 	<script type="text/javascript">
+
+	function back(a){
+      $('#scqy3').removeClass('pt-page-rotateCarouselBottomIn');
+      $('#scqy3').addClass('pt-page-rotateCarouselBottomOut');
+      setTimeout(
+         function(){
+            window.location = a;
+         },200
+      )
+    }
+
 		function jujue()
 		{
 			

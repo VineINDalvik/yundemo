@@ -9,6 +9,7 @@
    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
    <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <link href="../yun_demo_css/animations.css" rel="stylesheet">
    <script src="../yun_demo_js/yun_demo.js"></script>
 
    <script src="../js/jquery-1.7.min.js" type="text/javascript"></script>
@@ -17,7 +18,7 @@
 </head>
 
 <body>
-	<div class="customer_info">
+	<div id="cus2" class="customer_info pt-page-rotateCubeBottomIn">
 		<!-- <div id="head" class="formal_head">
          	<div class="account">
          		<img src="" alt="头像" class="img-responsive img-circle img2">
@@ -29,8 +30,7 @@
           <div class="account">
             <img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
             <p class="text2"><span id="user_name">张三</span><br/>消费者</p>
-            <a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/main.html" class="exit">退出</a>
-          </div>
+            <a href="javascript:;" class="exit" onclick="back('main.html')">退出</a>          
     </div>
 		<div class="main_form">
 			<form class="form-horizontal" id="form_type" role="form" >
@@ -81,18 +81,28 @@
                   <br/>
                   <div class="form-group">
                    <div class="col-sm-offset-5 col-sm-3">
-                     <button type="button" class="btn btn-primary" onclick="window.location='../%E4%BA%91%E5%88%B6%E9%80%A0demo/customer_funcChoose.html'">确定</button>
+                     <button type="button" class="btn btn-primary" onclick="back('customer_funcChoose.html')">确定</button>
                    </div>
                    
                  </div>
       </form>
 		</div>
-    <div id="zuoxia_fanhui"><a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/customer_funcChoose.html"><p>&#60;&#60;返回功能选择</p></a></div>
+    
 	</div>
+  <div id="zuoxia_fanhui"><a href="javascript:;" onclick="back('customer_funcChoose.html')"><p>&#60;&#60;返回功能选择</p></a></div>
   <script type="text/javascript">
     $(function (){
   initComplexArea('seachprov', 'seachcity', 'seachdistrict', area_array, sub_array, '44', '0', '0');
 });
     initname();
+    function back(a){
+      $('#cus2').removeClass('pt-page-rotateCubeBottomIn');
+      $('#cus2').addClass('pt-page-rotateCubeTopOut');
+      setTimeout(
+         function(){
+            window.location = a;
+         },200
+      )
+    }
   </script>
 </body>

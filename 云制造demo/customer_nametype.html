@@ -9,17 +9,18 @@
    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
    <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <link href="../yun_demo_css/animations.css" rel="stylesheet">
    <script src="../yun_demo_js/yun_demo.js"></script>
 
 </head>
 
 <body>
-	<div class="customer_nametype">
+	<div id="cus3" class="customer_nametype pt-page-rotateCubeBottomIn">
 		<div id="head" class="formal_head">
           <div class="account">
             <img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
             <p class="text2"><span id="user_name">张三</span><br/>消费者</p>
-            <a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/main.html" class="exit">退出</a>
+            <a href="javascript:;" class="exit" onclick="back('main.html')">退出</a> 
           </div>
     </div>
     <div style="position: absolute;left: 300px;top: 130px;background-image: url(../yun_demo_image/customer_jindu1.png); width: 800px;height: 50px;"></div>
@@ -64,14 +65,23 @@
                      <button type="button" class="btn btn-primary" onclick="nametype_sure()">确定</button>
                    </div>
                    <div class="col-sm-offset-3 col-sm-3">
-                     <button type="button" class="btn btn-primary" onclick=" window.location='../%E4%BA%91%E5%88%B6%E9%80%A0demo/customer_funcChoose.html'">返回</button>
+                     <button type="button" class="btn btn-primary" onclick="back('customer_funcChoose.html')">返回</button>
                    </div>
                  </div>
       </form>
 		</div>
-     <div id="zuoxia_fanhui"><a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/customer_funcChoose.html"><p>&#60;&#60;返回功能选择</p></a></div>
+     <div id="zuoxia_fanhui"><a href="javascript:;" onclick="back('customer_funcChoose.html')"><p>&#60;&#60;返回功能选择</p></a></div>
 	</div>
   <script type="text/javascript">
     initname();
+    function back(a){
+      $('#cus3').removeClass('pt-page-rotateCubeBottomIn');
+      $('#cus3').addClass('pt-page-rotateCubeTopOut');
+      setTimeout(
+         function(){
+            window.location = a;
+         },200
+      )
+    }
   </script>
 </body>

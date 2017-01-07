@@ -9,17 +9,29 @@
    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
    <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <link href="../yun_demo_css/animations.css" rel="stylesheet">
    <script src="../yun_demo_js/yun_demo.js"></script>
+   <script type="text/javascript">
+     function back(a){
+      $('#xngc_sublist').removeClass('pt-page-scaleUpCenter');
+      $('#xngc_sublist').addClass('pt-page-scaleDownCenter');
+      setTimeout(
+         function(){
+            window.location = a;
+         },200
+      )
+    }
+   </script>
 	
 </head>
 
 <body >
-	<div class="shengchanqiye_dingdanweihu">
+	<div id="xngc_sublist" class="shengchanqiye_dingdanweihu pt-page-scaleUpCenter">
 		<div id="head" class="formal_head">
          	<div class="account">
          		<img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
          		<p class="text2"><span id="user_name">甲厂</span><br/>虚拟工厂</p>
-         		<a href="main.html" class="exit">退出</a>
+         		<a href="javascript:;" class="exit" onclick="back('main.html')">退出</a>
          	</div>
 		</div>
 
@@ -74,9 +86,9 @@
       </table>
 
       <div  style="width: 100%;height: 60px;display: inline-block;position: absolute;bottom: 60px;text-align: center;">
-            <button type="button" class="btn btn-primary" onclick="javascript:location.href='xngc1.html'" >确定</button>
+            <button type="button" class="btn btn-primary" onclick="back('xngc1.html')" >确定</button>
             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            <button type="button" class="btn btn-primary" onclick="javascript:location.href='xngc_orderlist.html'" >返回</button>
+            <button type="button" class="btn btn-primary" onclick="back('xngc_orderlist.html')" >返回</button>
          </div>
 
 

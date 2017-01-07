@@ -9,28 +9,39 @@
    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
    <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <link href="../yun_demo_css/animations.css" rel="stylesheet">
    <script src="../yun_demo_js/yun_demo.js"></script>
 
 </head>
 
 <body >
-  <div class="xngc_funcChoose">
+  <div id="xngc1" class="xngc_funcChoose pt-page-flipInRight">
 
        <div id="head" class="formal_head">
           <img class="banner" src="../yun_demo_image/banner.png">
           <div class="account">
             <img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
             <p class="text2"><span id="user_name">甲厂</span><br/>虚拟工厂</p>
-            <a href="main.html" class="exit">退出</a>
+            <a href="javascript:;" class="exit" onclick="loc('main.html')">退出</a>
           </div>
        </div>
 
-    <a href="xngc2.html" ><div  id="func_1"></div></a>
-    <a href="xngc_designtasks.html" ><div  id="func_2"></div></a>
-    <a href="xngc_orderlist.html" ><div  id="func_3"></div></a>
+    <a href="javascript:;" onclick="loc('xngc2.html')"><div  id="func_1"></div></a>
+    <a href="javascript:;" onclick="loc('xngc_designtasks.html')" ><div  id="func_2"></div></a>
+    <a href="javascript:;" onclick="loc('xngc_orderlist.html')" ><div  id="func_3"></div></a>
   </div>
   <script type="text/javascript">
       initname();
+      function loc(a){
+      $('#xngc1').removeClass('pt-page-flipInRight');
+      $('#xngc1').addClass('pt-page-flipOutRight');
+      setTimeout(
+         function(){
+            window.location = a;
+         },200
+      )
+      
+    }
       // document.getElementById("user_name").innerHTML="sdsdsdsd";
   </script>
 </body>

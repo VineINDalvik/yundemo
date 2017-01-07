@@ -9,17 +9,39 @@
    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
    <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <link href="../yun_demo_css/animations.css" rel="stylesheet">
    <script src="../yun_demo_js/yun_demo.js"></script>
+   <script type="text/javascript">
+     function back(a){
+      $('#xngc3').removeClass('pt-page-flipInLeft');
+      $('#xngc3').addClass('pt-page-flipOutLeft');
+      setTimeout(
+         function(){
+            window.location = a;
+         },200
+      )
+    }
+
+    function loc(a){
+      $('#xngc3').removeClass('pt-page-flipInLeft');
+      $('#xngc3').addClass('pt-page-scaleDownCenter');
+      setTimeout(
+         function(){
+            window.location = "xngc_newdesign.html?account="+a;
+         },200
+      )
+    }
+   </script>
 	
 </head>
 
 <body >
-	<div class="shengchanqiye_dingdanweihu">
+	<div id="xngc3" class="shengchanqiye_dingdanweihu pt-page-flipInLeft">
 		<div id="head" class="formal_head">
          	<div class="account">
          		<img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
          		<p class="text2"><span id="user_name">甲厂</span><br/>虚拟工厂</p>
-         		<a href="main.html" class="exit">退出</a>
+         		<a href="javascript:;" class="exit" onclick="back('main.html')">退出</a>
          	</div>
 		</div>
 
@@ -47,7 +69,7 @@
             <td>Bangalore</td>
             <td>是</td>
             <td>∞</td>
-            <td><button type="button" class="btn btn-primary" onclick="javascript:location.href='xngc_newdesign.html?account=213212320'">接受</button></td>
+            <td><button type="button" class="btn btn-primary" onclick="loc('213212320')">接受</button></td>
             <td><button type="button" class="btn btn-primary" onclick="javascript:location.href=''">拒绝</button></td>
           </tr>
           <tr>
@@ -57,7 +79,7 @@
             <td>四个</td>
             <td>否</td>
             <td>∞</td>
-            <td><button type="button" class="btn btn-primary" onclick="javascript:location.href='xngc_newdesign.html?account=213212321'">接受</button></td>
+            <td><button type="button" class="btn btn-primary" onclick="loc('213212321'">接受</button></td>
             <td><button type="button" class="btn btn-primary" onclick="javascript:location.href=''">拒绝</button></td>
           </tr>
           <tr>
@@ -67,7 +89,7 @@
             <td>二个</td>
             <td>否</td>
             <td>∞</td>
-            <td><button type="button" class="btn btn-primary" onclick="javascript:location.href='xngc_newdesign.html?account=213212323'">接受</button></td>
+            <td><button type="button" class="btn btn-primary" onclick="loc('213212323'">接受</button></td>
             <td><button type="button" class="btn btn-primary" onclick="javascript:location.href=''">拒绝</button></td>
           </tr>
           <tr>
@@ -77,19 +99,19 @@
             <td>zzz</td>
             <td>是</td>
             <td>∞</td>
-            <td><button type="button" class="btn btn-primary" onclick="javascript:location.href='xngc_newdesign.html?account=213212323'">接受</button></td>
+            <td><button type="button" class="btn btn-primary" onclick="loc('213212323'">接受</button></td>
             <td><button type="button" class="btn btn-primary" onclick="javascript:location.href=''">拒绝</button></td>
           </tr>
         </tbody>
       </table>
 
       <div  style="width: 100%;height: 60px;display: inline-block;position: absolute;bottom: 60px;text-align: center;">
-            <button type="button" class="btn btn-primary" onclick="javascript:location.href='xngc1.html'" >确定</button>
+            <button type="button" class="btn btn-primary" onclick="back('xngc1.html')" >确定</button>
          </div>
 
 
 
    </div>
-   <div id="zuoxia_fanhui"><a href="xngc1.html"><p>&#60;&#60;返回功能选择</p></a></div>
+   <div id="zuoxia_fanhui"><a href="javascript:;" onclick="back('xngc1.html')"><p>&#60;&#60;返回功能选择</p></a></div>
 </body>
 </html>

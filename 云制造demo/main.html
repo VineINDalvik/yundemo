@@ -9,13 +9,14 @@
    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
    <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <link href="../yun_demo_css/animations.css" rel="stylesheet">
    <script src="../yun_demo_js/yun_demo.js"></script>
 
 </head>
 
 <body >
 	
-   <div id="mainbody"> 
+   <div id="mainbody" class="pt-page-rotateInNewspaper"> 
       <div id="head">
          
          <!-- <div class="title">
@@ -25,24 +26,34 @@
       </div>
       <div id="click_1">
          
-         <a href="chengchanqiye_login.html"><img src="../yun_demo_image/shouye_1.png" alt="生产企业" class="img-responsive img-rounded"></a>
+         <a href="javascript:;" onclick="loc('chengchanqiye_login.html')"><img src="../yun_demo_image/shouye_1.png" alt="生产企业" class="img-responsive img-rounded"></a>
       </div>
       <div id="click_2">
          
-         <a href="xngc1_login.html"><img src="../yun_demo_image/shouye_2.png" alt="" class="img-responsive img-rounded"></a>
+         <a href="javascript:;" onclick="loc('xngc1_login.html')"><img src="../yun_demo_image/shouye_2.png" alt="" class="img-responsive img-rounded"></a>
       </div>
       <div id="click_3">
          
-         <a href="gly1_login.html"><img src="../yun_demo_image/shouye_3.png" alt="" class="img-responsive img-rounded"></a>
+         <a href="javascript:;" onclick="loc('gly1_login.html')"><img src="../yun_demo_image/shouye_3.png" alt="" class="img-responsive img-rounded"></a>
       </div>
       <div id="click_4">
          
-         <a href="customer_login.html"><img src="../yun_demo_image/shouye_4.png" alt="" class="img-responsive img-rounded"></a>
+         <a href="javascript:;" onclick="loc('customer_login.html')"><img src="../yun_demo_image/shouye_4.png" alt="" class="img-responsive img-rounded"></a>
       </div>
 
    </div>
    <script type="text/javascript">
     // checkCookie();
+    function loc(a){
+      $('#mainbody').removeClass('pt-page-rotateInNewspaper');
+      $('#mainbody').addClass('pt-page-rotateOutNewspaper');
+      setTimeout(
+         function(){
+            window.location = a;
+         },200
+      )
+      
+    }
   </script>
 	
 </body>

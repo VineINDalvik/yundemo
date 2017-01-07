@@ -9,17 +9,37 @@
    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
    <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <link href="../yun_demo_css/animations.css" rel="stylesheet">
    <script src="../yun_demo_js/yun_demo.js"></script>
-	
+	 <script type="text/javascript">
+    function back(a){
+      $('#gly_orderlist').removeClass('pt-page-moveFromLeft');
+      $('#gly_orderlist').addClass('pt-page-moveToLeft');
+      setTimeout(
+         function(){
+            window.location = a;
+         },200
+      ) 
+    }
+    function sub(a){
+      $('#gly_orderlist').removeClass('pt-page-moveFromLeft');
+      $('#gly_orderlist').addClass('pt-page-scaleDownCenter');
+      setTimeout(
+         function(){
+            window.location = "gly_suborderlist.html";
+         },200
+      )
+    }
+   </script>
 </head>
 
 <body >
-	<div class="shengchanqiye_dingdanweihu">
+	<div id="gly_orderlist" class="shengchanqiye_dingdanweihu pt-page-moveFromLeft">
 		<div id="head" class="formal_head">
          	<div class="account">
          		<img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
          		<p class="text2"><span id="user_name">张三</span><br/>管理员</p>
-         		<a href="main.html" class="exit">退出</a>
+         		<a href="javascript:;" onclick="back('main.html')" class="exit">退出</a>
          	</div>
 		</div>
 
@@ -118,34 +138,34 @@
             <td>电池</td>
             <td>Bangalore</td>
             <td>560001</td>
-            <td><button type="button" class="btn btn-primary" onclick="javascript:location.href='gly_suborderlist.html'">子订单状态跟踪</button></td>
+            <td><button type="button" class="btn btn-primary" onclick="sub()">子订单状态跟踪</button></td>
           </tr>
           <tr>
             <td>2132123121</td>
             <td>电池</td>
             <td>Mumbai</td>
             <td>400003</td>
-            <td><button type="button" class="btn btn-primary" onclick="javascript:location.href='gly_suborderlist.html'">子订单状态跟踪</button></td>
+            <td><button type="button" class="btn btn-primary" onclick="sub()">子订单状态跟踪</button></td>
           </tr>
           <tr>
             <td>213212322</td>
             <td>保护膜</td>
             <td>Pune</td>
             <td>411027</td>
-            <td><button type="button" class="btn btn-primary" onclick="javascript:location.href='gly_suborderlist.html'">子订单状态跟踪</button></td>
+            <td><button type="button" class="btn btn-primary" onclick="sub()">子订单状态跟踪</button></td>
           </tr>
           <tr>
             <td>213212323</td>
             <td>保护膜</td>
             <td>Bangalore</td>
             <td>560001</td>
-            <td><button type="button" class="btn btn-primary" onclick="javascript:location.href='gly_suborderlist.html'">子订单状态跟踪</button></td>
+            <td><button type="button" class="btn btn-primary" onclick="sub()">子订单状态跟踪</button></td>
           </tr>
         </tbody>
       </table>
 
       <div  style="width: 100%;height: 60px;display: inline-block;position: absolute;bottom: 60px;text-align: center;">
-            <button type="button" class="btn btn-primary" onclick="javascript:location.href='gly1.html'" >确认</button>
+            <button type="button" class="btn btn-primary" onclick="back('gly1.html')" >确认</button>
          </div>
 
 
@@ -551,7 +571,7 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-<div id="zuoxia_fanhui"><a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/gly1.html"><p>&#60;&#60;返回功能选择</p></a></div>
+<div id="zuoxia_fanhui"><a href="javascript:;" onclick="back('gly1.html')"><p>&#60;&#60;返回功能选择</p></a></div>
 
 </body>
 </html>

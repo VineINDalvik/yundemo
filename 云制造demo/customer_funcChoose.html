@@ -9,12 +9,13 @@
    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
    <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <link href="../yun_demo_css/animations.css" rel="stylesheet">
    <script src="../yun_demo_js/yun_demo.js"></script>
 
 </head>
 
 <body >
-	<div class="customer_funcChoose ">
+	<div id="cus1" class="customer_funcChoose pt-page-rotateCubeTopIn">
 		<!-- <div id="head">
          	<div class="account">
          		<img src="" alt="头像" class="img-responsive img-circle img2">
@@ -26,16 +27,26 @@
          	<div class="account">
          		<img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
          		<p class="text2"><span id="user_name">张三</span><br/>消费者</p>
-         		<a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/main.html" class="exit">退出</a>
+         		<a href="javascript:;" class="exit" onclick="loc('main.html')">退出</a>
          	</div>
 		</div>
 
-		<a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/customer_info.html" ><div  id="func_1"></div></a>
-		<a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/customer_nametype.html" ><div  id="func_2"></div></a>
-		<a href="../%E4%BA%91%E5%88%B6%E9%80%A0demo/customer_dingdanweihu.html" ><div  id="func_3"></div></a>
+		<a href="javascript:;" onclick="loc('customer_info.html')" ><div  id="func_1"></div></a>
+		<a href="javascript:;" onclick="loc('customer_nametype.html')" ><div  id="func_2"></div></a>
+		<a href="javascript:;" onclick="loc('customer_dingdanweihu.html')" ><div  id="func_3"></div></a>
 	</div>
 	<script type="text/javascript">
     	initname();
+      function loc(a){
+      $('#cus1').removeClass('pt-page-rotateCubeTopIn');
+      $('#cus1').addClass('pt-page-rotateCubeBottomOut');
+      setTimeout(
+         function(){
+            window.location = a;
+         },200
+      )
+      
+    }
     	// document.getElementById("user_name").innerHTML="sdsdsdsd";
   </script>
 </body>
