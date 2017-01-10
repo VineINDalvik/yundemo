@@ -40,60 +40,55 @@
 		<div id="head" class="formal_head">
          	<div class="account">
          		<img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
-         		<p class="text2"><span id="user_name">甲厂</span><br/>虚拟工厂</p>
+         		<p class="text2"><span id="user_name">天天工厂</span><br/>虚拟工厂</p>
          		<a href="javascript:;" class="exit" onclick="back('main.html')">退出</a>
          	</div>
 		</div>
 
       <div style="font-size: 25px;position: relative;text-align: center;top: 70px;">订单列表</div>
       <div class="new" onclick="unfin_order0()" id="unfinish_order">尚未生产的订单 （<span id="new_num">6</span>）</div>
-      <div class="now" onclick="fini_order0()" id="finished_order">已生产的订单 （<span id="now_num">4</span>）</div>
+      <div class="now" onclick="fini_order0()" id="finished_order">已生产的订单 （<span id="now_num">1</span>）</div>
 
       <table id="cont_1" class="table table-striped" style="width: 900px;position: absolute;left: 300px;top: 170px;z-index: 1;">
         <thead>
           <tr>
-            <th>子订单号</th>
+            <th>订单号</th>
+            <th>需求方</th>
             <th>产品名称</th>
             <th>详细信息</th>
-            <th>需求方</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>213212310</td>
-            <td>螺丝钉</td>
-            <td>Bangalore</td>
-            <td>560001</td>
+            
+            <td>213212353</td>
+            <td>叮咚乐器</td>
+            <td>定制尤克里里</td>
+            <td>刻录名字</td>
           </tr>
           <tr>
-            <td>213212311</td>
-            <td>螺丝钉</td>
-            <td>Mumbai</td>
-            <td>400003</td>
+            <td>213212321</td>
+            <td>李飞</td>
+            <td>个性化滚筒式洗衣机</td>
+            <td>双开门全自动</td>
           </tr>
           <tr>
-            <td>213212312</td>
-            <td>螺丝钉</td>
-            <td>Pune</td>
-            <td>411027</td>
+            <td>213212322</td>
+            <td>王平先</td>
+            <td>定制化全自动三门冰箱</td>
+            <td>1295mm*475mm*525mm</td>
           </tr>
           <tr>
-            <td>213212314</td>
-            <td>螺丝钉</td>
-            <td>Bangalore</td>
-            <td>560001</td>
+            <td>213212323</td>
+            <td>中为有限公司</td>
+            <td>水墨屏阅读器</td>
+            <td>专为精品阅读设计</td>
           </tr>
           <tr>
-            <td>213212315</td>
-            <td>螺丝钉</td>
-            <td>Mumbai</td>
-            <td>400003</td>
-          </tr>
-          <tr>
-            <td>213212316</td>
-            <td>螺丝钉</td>
-            <td>Pune</td>
-            <td>411027</td>
+            <td>213212324</td>
+            <td>平安烘焙</td>
+            <td>烤箱</td>
+            <td>30L</td>
           </tr>
         </tbody>
       </table>
@@ -101,40 +96,19 @@
       <table id="cont_2" class="table table-striped" style="width: 900px;position: absolute;left: 300px;top: 170px;z-index: 1;visibility=hidden;">
         <thead>
           <tr>
-            <th>子订单号</th>
+            <th>订单号</th>
+            <th>需求方</th>
             <th>产品名称</th>
             <th>详细信息</th>
-            <th>需求方</th>
             <th></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>213212320</td>
-            <td>电池</td>
-            <td>Bangalore</td>
-            <td>560001</td>
-            <td><button type="button" class="btn btn-primary" onclick="sub()">子订单状态跟踪</button></td>
-          </tr>
-          <tr>
-            <td>2132123121</td>
-            <td>电池</td>
-            <td>Mumbai</td>
-            <td>400003</td>
-            <td><button type="button" class="btn btn-primary" onclick="sub()">子订单状态跟踪</button></td>
-          </tr>
-          <tr>
-            <td>213212322</td>
-            <td>保护膜</td>
-            <td>Pune</td>
-            <td>411027</td>
-            <td><button type="button" class="btn btn-primary" onclick="sub()">子订单状态跟踪</button></td>
-          </tr>
-          <tr>
-            <td>213212323</td>
-            <td>保护膜</td>
-            <td>Bangalore</td>
-            <td>560001</td>
+            <td>刘国明</td>
+            <td>自定义曲屏智能手机</td>
+            <td>5.5英寸曲屏</td>
             <td><button type="button" class="btn btn-primary" onclick="sub()">子订单状态跟踪</button></td>
           </tr>
         </tbody>

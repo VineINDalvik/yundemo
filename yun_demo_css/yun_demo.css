@@ -1,4 +1,4 @@
-
+ 
 html,body {
 	height: 100%;
 
@@ -106,6 +106,7 @@ html,body {
 	width: 100px;
 	color: black;
 }
+
 .chengchanqiye_1 {
 	color: #888888;
 	height: 100%;
@@ -148,6 +149,24 @@ html,body {
 	margin-top: -20px;
 
 }
+
+
+#login{
+	position: absolute;
+	left: 650px;
+	top: 120px;
+	width: 80px;
+	height: 40px;
+}
+#register{
+	position: absolute;
+	left: 750px;
+	top: 120px;
+	width: 80px;
+	height: 40px;
+}
+
+
 .shengchanqiye_2 .title {
 	position: relative;
 	top: 150px;
@@ -221,6 +240,8 @@ html,body {
 	bottom: 15px;
 	right: 15px;
 }
+
+
 /*定义了一般的head，也就是右上角的用户信息*/
 .formal_head {
 	width: 100%;
@@ -260,6 +281,16 @@ html,body {
 	bottom: 15px;
 	right: 15px;
 }
+
+.shengchanqiye_3 #function {
+	position: absolute;
+	top: 130px;
+	left: 640px;
+	width: 184px;
+	height: 63px;
+	background-image:url(../yun_demo_image/function.png);
+	}
+
 /*定义了两个隐藏的按钮*/
 .shengchanqiye_3 #func_1 {
 	position: absolute;
@@ -1005,7 +1036,7 @@ html,body {
 	.customer_dingdanweihu #cont_2 {
 		visibility: hidden;
 	}
-	.customer_dingdanweihu #cont_0 {
+	.customer_dingdanweihu #cont_3 {
 		visibility: hidden;
 	}
 
