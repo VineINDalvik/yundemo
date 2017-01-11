@@ -21,6 +21,20 @@
          },200
       )
     }
+    function GetQueryString(name)
+    {
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+    }
+
+    window.onload = function(){
+      var tds = document.getElementsByName("td");
+        for(i=0;i<tds.length;i++){
+          tds[i].innerHTML = GetQueryString('id') + "_0" + i;
+        }
+    } 
+
    </script>
 	
 </head>
@@ -51,35 +65,35 @@
         </thead>
         <tbody>
           <tr>
-            <td>213212320</td>
-            <td>塑料</td>
-            <td>Bangalore</td>
-            <td>甲厂</td>
-            <td>1</td>
+            <td name="td">213212320_01</td>
+            <td>听筒</td>
+            <td>20个</td>
+            <td>哈尔滨扬新制造公司</td>
+            <td>第一阶段</td>
             <td><button type="button" class="btn btn-primary" >现场视频</button></td>
           </tr>
           <tr>
-            <td>2132123121</td>
-            <td>塑料</td>
-            <td>Mumbai</td>
-            <td>甲厂</td>
-            <td>1</td>
+            <td name="td">213212320_02</td>
+            <td>摄像头</td>
+            <td>20个</td>
+            <td>海南科恩制造公司</td>
+            <td>第二阶段</td>
             <td><button type="button" class="btn btn-primary" >现场视频</button></td>
           </tr>
           <tr>
-            <td>213212322</td>
-            <td>塑料</td>
-            <td>Pune</td>
-            <td>甲厂</td>
-            <td>2</td>
+            <td name="td">213212320_03</td>
+            <td>机壳</td>
+            <td>20份</td>
+            <td>上海金星制造公司</td>
+            <td>第一阶段</td>
             <td><button type="button" class="btn btn-primary" >现场视频</button></td>
           </tr>
           <tr>
-            <td>213212323</td>
-            <td>塑料</td>
-            <td>Bangalore</td>
-            <td>甲厂</td>
-            <td>2</td>
+            <td name="td">213212320_04</td>
+            <td>数据线</td>
+            <td>40根</td>
+            <td>天津丰泰制造公司</td>
+            <td>第一阶段</td>
             <td><button type="button" class="btn btn-primary" >现场视频</button></td>
           </tr>
         </tbody>
