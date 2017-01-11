@@ -133,7 +133,7 @@
 				<div style="display: inline-block;font-size: 20px;width: 160px;height: 60px; text-align:center;padding-top: 15px;position: absolute;left: 700px;">子订单状态跟踪</div>
 			</div>
 			<!-- body -->
-			<div id="yishengchan_main" style="width: 660px;height: 330px;overflow-y:auto;position: absolute;top: 60px;">
+			<div id="yishengchan_main" style="width: 910px;height: 330px;overflow-y:auto;position: absolute;top: 60px;">
 				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
 					<div style="display: inline-block;font-size: 19px;width: 75px;height: 55px; text-align:center;padding-top: 13px;">
 						1
@@ -150,6 +150,9 @@
 					<div style="display: inline-block;font-size: 19px;width: 115px;height: 55px;text-align:center; padding-top: 13px;">
 						金星工厂
 					</div>
+					<div style="display: inline-block;font-size: 19px;width: 250px;height: 55px;text-align:center; padding-top: 13px;">
+						<button type="button" class="btn btn-primary" onclick="sub('213212310')">子订单状态跟踪</button>
+					</div>					
 				</div>
 				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
 					<div style="display: inline-block;font-size: 19px;width: 75px;height: 55px; text-align:center;padding-top: 13px;">
@@ -167,6 +170,9 @@
 					<div style="display: inline-block;font-size: 19px;width: 115px;height: 55px;text-align:center; padding-top: 13px;">
 						天天工厂
 					</div>
+					<div style="display: inline-block;font-size: 19px;width: 250px;height: 55px;text-align:center; padding-top: 13px;">
+						<button type="button" class="btn btn-primary" onclick="sub('213212311')">子订单状态跟踪</button>
+					</div>	
 				</div>
 				<div style="width: 100%;height: 55px;display: inline-block;border-style: none none dotted none;border-color:#c0c0c0;border-width: 1px; " >
 					<div style="display: inline-block;font-size: 19px;width: 75px;height: 55px; text-align:center;padding-top: 13px;">
@@ -184,6 +190,9 @@
 					<div style="display: inline-block;font-size: 19px;width: 115px;height: 55px;text-align:center; padding-top: 13px;">
 						King
 					</div>
+					<div style="display: inline-block;font-size: 19px;width: 250px;height: 55px;text-align:center; padding-top: 13px;">
+						<button type="button" class="btn btn-primary" onclick="sub('213212312')">子订单状态跟踪</button>
+					</div>	
 				</div>
 			</div>
 			<!-- foot -->
@@ -243,6 +252,16 @@
       setTimeout(
          function(){
             window.location = a;
+         },200
+      )
+    }
+
+    function sub(a){
+      $('#cus4').removeClass('pt-page-rotateCubeBottomIn');
+      $('#cus4').addClass('pt-page-rotateCubeTopOut');
+      setTimeout(
+         function(){
+            window.location = "customer_suborderlist.html?id=" + a;
          },200
       )
     }
