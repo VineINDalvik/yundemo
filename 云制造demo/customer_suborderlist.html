@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>消费者子订单列表 </title>
+   <meta charset="utf-8">
+   <!-- <base href="file:///Users/hao123/Document/web/"> -->
+   <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="../js/jquery-3.1.1.js"></script>
+   <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+   <link href="../yun_demo_css/yun_demo.css" rel="stylesheet">
+   <link href="../yun_demo_css/animations.css" rel="stylesheet">
+   <script src="../yun_demo_js/yun_demo.js"></script>
+   <script type="text/javascript">
+     function back(a){
+      $('#customer_suborderlist').removeClass('pt-page-rotateCarouselTopIn');
+      $('#customer_suborderlist').addClass('pt-page-rotateCarouselTopOut');
+      setTimeout(
+         function(){
+            window.location = a;
+         },200
+      )
+    }
+    function GetQueryString(name)
+    {
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+    }
+
+    window.onload = function(){
+      var tds = document.getElementsByName("td");
+        for(i=0;i<tds.length;i++){
+          tds[i].innerHTML = GetQueryString('id') + "_" + i;
+        }
+    } 
+
+   </script>
+	
+</head>
+
+<body >
+	<div id="customer_suborderlist" class="shengchanqiye_dingdanweihu pt-page-rotateCarouselTopIn">
+		<div id="head" class="formal_head">
+         	<div class="account">
+         		<img src="../yun_demo_image/touxiang.png" alt="头像" class="img-responsive img-circle img2">
+         		<p class="text2"><span id="user_name">张三</span><br/>消费者</p>
+         		<a href="javascript:;" class="exit" onclick="back('main.html')">退出</a>
+         	</div>
+		</div>
+
+      <div style="width: 150px;font-size: 25px;position: absolute;left: 670px;top: 100px;">子订单列表</div>
+
+      
+      <table class="table table-striped" style="width: 900px;position: absolute;left: 300px;top: 170px;z-index: 1;">
+        <thead>
+          <tr>
+            <th>子订单号</th>
+            <th>产品名称</th>
+            <th>详细信息</th>
+            <th>生产企业</th>
+            <th>现处生产阶段</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td name="td">213212320_01</td>
+            <td>听筒</td>
+            <td>20个</td>
+            <td>哈尔滨扬新制造公司</td>
+            <td>第一阶段</td>
+            <td><button type="button" class="btn btn-primary" >现场视频</button></td>
+          </tr>
+          <tr>
+            <td name="td">213212320_02</td>
+            <td>摄像头</td>
+            <td>20个</td>
+            <td>海南科恩制造公司</td>
+            <td>第二阶段</td>
+            <td><button type="button" class="btn btn-primary" >现场视频</button></td>
+          </tr>
+          <tr>
+            <td name="td">213212320_03</td>
+            <td>机壳</td>
+            <td>20份</td>
+            <td>上海金星制造公司</td>
+            <td>第一阶段</td>
+            <td><button type="button" class="btn btn-primary" >现场视频</button></td>
+          </tr>
+          <tr>
+            <td name="td">213212320_04</td>
+            <td>数据线</td>
+            <td>40根</td>
+            <td>天津丰泰制造公司</td>
+            <td>第一阶段</td>
+            <td><button type="button" class="btn btn-primary" >现场视频</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div  style="width: 100%;height: 60px;display: inline-block;position: absolute;bottom: 60px;text-align: center;">
+            <button type="button" class="btn btn-primary" onclick="back('customer_funcChoose.html')" >确定</button>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <button type="button" class="btn btn-primary" onclick="back('customer_dingdanweihu.html')" >返回</button>
+         </div>
+
+
+
+   </div>
+</body>
