@@ -31,7 +31,11 @@
     window.onload = function(){
       var tds = document.getElementsByName("td");
         for(i=0;i<tds.length;i++){
-          tds[i].innerHTML = GetQueryString('id') + "_" + i;
+          if(i>9){
+            tds[i].innerHTML = GetQueryString('id') + "_" + i;
+          }else{
+            tds[i].innerHTML = GetQueryString('id') + "_0" + i;
+          }
         }
     } 
 
